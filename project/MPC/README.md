@@ -9,11 +9,16 @@
    
    
    
-### DoublePendulumRR-v0
-
+### DoublePendulum-v0
+   learning_rate = 3e-5
+   
+   networks architecture = 
 
 
 
 ### CartpoleSwingShort-v0
+   learning_rate = 3e-5
    
+   networks architecture = 
+
 
