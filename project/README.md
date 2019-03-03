@@ -5,29 +5,29 @@ Supervision: Jan Peters, Samuele Tosatto
 ## Authors
 + Zuxin Liu
 
-Yunhao Li
++ Yunhao Li
 
-Junfei Xiao
++ Junfei Xiao
 
 ## Algorithms
-DQN
++ DQN
 
-MPC
++ MPC
 
 ## Platforms
-Qube
++ Qube
 
-Double Pendlum
++ Double Pendlum
 
-Cartpole swing-up
++ Cartpole swing-up
 
 ## Installation
 The following Python packages are required:
 
-Pytorch
++ Pytorch
 
-numpy
++ numpy
 
-gym
++ gym
 
-matplotlib
++ matplotlib
