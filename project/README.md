@@ -3,7 +3,7 @@ Technische Universität Darmstadt winter semester 2018/2019
 Supervision: Jan Peters, Samuele Tosatto
 
 ## Authors
-Zuxin Liu
+×Zuxin Liu
 
 Yunhao Li
 
