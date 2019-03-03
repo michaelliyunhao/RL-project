@@ -1,10 +1,15 @@
-# 开源中国社区
+# Overview of Experiment on the Quanser-Robot environment
 
-### Header 3
+## DQN(Deep Q-learning)
 
-> This is a blockquote.
-> 
-> This is the second paragraph in the blockquote.
->
-> ## This is an H2 in a blockquote
+### Cartpole swingup
+
+
+
+
+
+## MPC(Model Predictive Control)
+
+
+
 
