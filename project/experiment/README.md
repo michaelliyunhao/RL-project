@@ -12,6 +12,8 @@
 
 ### Qube
 dynamics fitting
+
+
 | done |  method  | random seed | optimizer |   |
 |------|----------|-------------|-----------|--:|
 |      |          |             |           |   |
