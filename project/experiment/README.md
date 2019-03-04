@@ -11,14 +11,16 @@
 ## MPC(Model Predictive Control)
 
 ### Qube
-Dynamics fitting
+Dynamics fitting:
 
-| done |  method  | neural networks | optimizer |   |
+| done |  method  | optimizer | optimizer |   |
 |------|----------|-------------|-----------|--:|
 |      | neural networks         |             |           |   |
 |      | neural networks         |             |           |   |
 |      | neural networks        |             |           |   |
 
 
+
+Examples:
 
 ### Cartpole swingup
