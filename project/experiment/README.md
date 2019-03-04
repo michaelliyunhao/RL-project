@@ -24,6 +24,8 @@ mode-1: the qube trends to move left(actions < 0), which has a probability to ra
 
 probabity = 0.3
 
+data arichtecture:  mode0_epochs * mode0_samples_num + mode1_epochs * mode1_samples_num + mode-1_epochs * mode-1_samples_num
+
 | data name |  len  | data architecture |
 |------|----------|-------------|
 | qube_datasets1, qube_labels1  |  70000  | 300 * 100 + 200 * 100 + 200 * 100 |
