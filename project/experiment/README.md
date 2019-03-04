@@ -16,15 +16,15 @@ Data:
 
 To collect the initial random data and create enhance data, we define 3 modes to collect data:
 
-mode0: the qube is randomly choose actions
++ mode0: the qube is randomly choose actions
 
-mode1: the qube trends to move right(actions > 0), which has a probability to randomly choose action which is obove 0
++ mode1: the qube trends to move right(actions > 0), which has a probability to randomly choose action which is obove 0
 
-mode-1: the qube trends to move left(actions < 0), which has a probability to randomly choose action which is below 0
++ mode-1: the qube trends to move left(actions < 0), which has a probability to randomly choose action which is below 0
 
-probabity = 0.3
+ probabity = 0.3
 
-data arichtecture:  mode0_epochs * mode0_samples_num + mode1_epochs * mode1_samples_num + mode-1_epochs * mode-1_samples_num
+ data arichtecture:  mode0_epochs * mode0_samples_num + mode1_epochs * mode1_samples_num + mode-1_epochs * mode-1_samples_num
 
 | data name |  len  | data architecture |
 |------|----------|-------------|
