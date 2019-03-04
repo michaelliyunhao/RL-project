@@ -11,12 +11,11 @@
 ## MPC(Model Predictive Control)
 
 ### Qube
-dynamics fitting
-
+Dynamics fitting
 
 | done |  method  | random seed | optimizer |   |
 |------|----------|-------------|-----------|--:|
-|      |          |             |           |   |
+|      | neural networks         |             |           |   |
 |      |          |             |           |   |
 |      |          |             |           |   |
 
