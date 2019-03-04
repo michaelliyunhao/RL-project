@@ -27,11 +27,9 @@ Dynamics fitting:
 | h1_30     |  neural networks  |  Adam     |     | |  4 * 30 * 3
 | qube_70_2     | neural networks   |  Adam     |   |   |  7 * 70 * 70 * 6
 | qube_80_2    | neural networks   |  Adam     |  |    | 7 * 100 * 6
-
 | qube_80_2_new    | neural networks   |  Adam     |  |    | 7 * 100 * 6
 | qube_80_2_new2    | neural networks   |  Adam     |  |    | 7 * 100 * 6
 | qube_80_2_new3    | neural networks   |  Adam     |  |    | 7 * 100 * 6
-
 | qube_100_1     | neural networks   |  Adam     |  |    | 7 * 100 * 6
 | qube_100_2     | neural networks   |  Adam     |    |  | 7 * 100 * 100 * 6
 | qube_200_2_new     | neural networks   |  Adam     |  |    | 7 * 200 * 200 * 6
