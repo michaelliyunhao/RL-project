@@ -13,7 +13,7 @@
 ### Qube
 Dynamics fitting:
 
-| model name |  method  | optimizer | optimizer |   |
+| model name |  method  | optimizer | train data name | train data type  |
 |------|----------|-------------|-----------|--:|
 |  qube_80_1    | neural networks         |   Adam          |           |   |
 |  h0_100    | neural networks         |   Adam          |           |   |
