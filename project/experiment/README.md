@@ -13,11 +13,13 @@
 ### Qube
 Dynamics fitting:
 
-| done |  method  | optimizer | optimizer |   |
+| model name |  method  | optimizer | optimizer |   |
 |------|----------|-------------|-----------|--:|
-|      | neural networks         |             |           |   |
-|      | neural networks         |             |           |   |
-|      | neural networks        |             |           |   |
+|  qube_80_1    | neural networks         |   Adam          |           |   |
+|  h0_100    | neural networks         |   Adam          |           |   |
+|      | neural networks        |    Adam        |           |   |
+|      |    |     |      |
+|      |    |     |      |
 
 
 
