@@ -9,7 +9,10 @@
 
 
 ## MPC(Model Predictive Control)
-| done | discount | random seed | optimizer |   |
+
+### Qube
+dynamics fitting
+| done |  method  | random seed | optimizer |   |
 |------|----------|-------------|-----------|--:|
 |      |          |             |           |   |
 |      |          |             |           |   |
@@ -17,3 +20,4 @@
 
 
 
+### Cartpole swingup
