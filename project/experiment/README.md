@@ -10,7 +10,7 @@
 
 ## MPC(Model Predictive Control)
 
-####Data:
+#### Data:
 
 To collect the initial random data and create enhance data, we define 3 modes to collect data:
 
