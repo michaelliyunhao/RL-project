@@ -31,7 +31,7 @@ To collect the initial random data and create enhance data, we define 3 modes to
 | data name |  len  | data architecture |
 |------|----------|-------------|
 | qube_datasets1, qube_labels1  |  70000  | 300 * 100 + 200 * 100 + 200 * 100 |
-| qube_datasets2, qube_labels2  |  collect method  | optimizer |
+| qube_datasets2, qube_labels2  |  30000 | 100 * 100 + 100 * 100 + 100 * 100 |
 | qube_datasets3, qube_labels3  |  collect method  | optimizer |
 | qube_datasets4, qube_labels4  |  collect method  | optimizer |
 | qube_datasets5, qube_labels5  |  collect method  | optimizer |
