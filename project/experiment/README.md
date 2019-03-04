@@ -13,11 +13,11 @@
 ### Qube
 Dynamics fitting
 
-| done |  method  | random seed | optimizer |   |
+| done |  method  | neural networks | optimizer |   |
 |------|----------|-------------|-----------|--:|
 |      | neural networks         |             |           |   |
-|      |          |             |           |   |
-|      |          |             |           |   |
+|      | neural networks         |             |           |   |
+|      | neural networks        |             |           |   |
 
 
 
