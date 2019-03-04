@@ -17,10 +17,13 @@ Dynamics fitting:
 |------|----------|-------------|-----------|--:|
 |  qube_80_1    | neural networks         |   Adam          |           |   |
 |  h0_100    | neural networks         |   Adam          |           |   |
-|      | neural networks        |    Adam        |           |   |
-|      |    |     |      |
-|      |    |     |      |
-
+| h1_15     | neural networks        |    Adam        |           |   |
+| h1_30     |  neural networks  |  Adam     |      |
+| qube_70_2     | neural networks   |  Adam     |      |
+| qube_80_2    | neural networks   |  Adam     |      |
+| qube_100_1     | neural networks   |  Adam     |      |
+| qube_100_2     | neural networks   |  Adam     |      |
+| qube_200_2_new     | neural networks   |  Adam     |      |
 
 
 Examples:
