@@ -11,6 +11,12 @@
 ## MPC(Model Predictive Control)
 
 ### Qube
+
+Data:
+
+| data name |  collect method  | optimizer |
+|------|----------|-------------|
+
 Dynamics fitting:
 
 | model name |  method  | optimizer | train data name | train data type  |
