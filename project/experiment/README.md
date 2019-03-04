@@ -16,6 +16,15 @@ Data:
 
 | data name |  collect method  | optimizer |
 |------|----------|-------------|
+| qube_datasets1, qube_labels1  |  collect method  | optimizer |
+| qube_datasets2, qube_labels2  |  collect method  | optimizer |
+| qube_datasets3, qube_labels3  |  collect method  | optimizer |
+| qube_datasets4, qube_labels4  |  collect method  | optimizer |
+| qube_datasets5, qube_labels5  |  collect method  | optimizer |
+| qube_datasets6_short, qube_labels6_short  |  collect method  | optimizer |
+| qube_enhance_datasets1, qube_enhance_labels1 |  collect method  | optimizer |
+| qube_enhance_datasets2, qube_enhance_labels2  |  collect method  | optimizer |
+| qube_enhance_datasets3, qube_enhance_labels3  |  collect method  | optimizer |
 
 Dynamics fitting:
 
