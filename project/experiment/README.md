@@ -15,7 +15,7 @@ Dynamics fitting:
 
 | model name |  method  | optimizer | train data name | train data type  |
 |------|----------|-------------|-----------|--:|
-|  qube_80_1    | neural networks         |   Adam          |           |   |
+|  qube_80_1    | neural networks         |   Adam          | qube_enhance_dataset1, qube_enhance_labels1          | enhance data  |
 |  h0_100    | neural networks         |   Adam          |           |   |
 | h1_15     | neural networks        |    Adam        |           |   |
 | h1_30     |  neural networks  |  Adam     |      |
