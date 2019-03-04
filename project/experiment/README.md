@@ -22,12 +22,7 @@ Dynamics fitting:
 | model name |  method  | optimizer | train data name | train data type  | model architecture |
 |------|----------|-------------|-----------|---------|--:|
 |  qube_80_1    | neural networks         |   Adam          | qube_enhance_dataset1, qube_enhance_labels1          | enhance data  |  7*70*70*6
-|  h0_100    | neural networks         |   Adam          |           |   | mlp(
-  (fc_list): ModuleList()
-  (fc_in): Linear(in_features=4, out_features=100, bias=True)
-  (act): Tanh()
-  (fc_out): Linear(in_features=100, out_features=3, bias=True)
-)  |
+|  h0_100    | neural networks         |   Adam          |           |   | 4*100*3   |
 | h1_15     | neural networks        |    Adam        |           |   |
 | h1_30     |  neural networks  |  Adam     |      |
 | qube_70_2     | neural networks   |  Adam     |      |
