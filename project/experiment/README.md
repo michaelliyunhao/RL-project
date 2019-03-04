@@ -10,9 +10,7 @@
 
 ## MPC(Model Predictive Control)
 
-### Qube
-
-Data:
+####Data:
 
 To collect the initial random data and create enhance data, we define 3 modes to collect data:
 
@@ -25,6 +23,10 @@ To collect the initial random data and create enhance data, we define 3 modes to
  probabity = 0.3
 
  data arichtecture:  mode0_epochs * mode0_samples_num + mode1_epochs * mode1_samples_num + mode-1_epochs * mode-1_samples_num
+
+### Qube
+
+
 
 | data name |  len  | data architecture |
 |------|----------|-------------|
