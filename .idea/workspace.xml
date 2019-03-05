@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py" afterPath="$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py" />
-      <change beforePath="$PROJECT_DIR$/test/ss.ss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb" afterPath="$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb" />
+      <change beforePath="$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py" afterPath="$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py" />
+      <change beforePath="$PROJECT_DIR$/project/DQN/DQN-Qube/train.py" afterPath="$PROJECT_DIR$/project/DQN/DQN-Qube/train.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding>
                 <element signature="e#17#28#0" expanded="true" />
               </folding>
@@ -29,18 +31,41 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="89">
+              <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="21" />
+              <folding>
+                <element signature="e#17#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_rr.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Qube.ipynb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DQN.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/DQN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="58" />
+              <folding>
+                <element signature="e#17#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_rr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding>
                 <element signature="e#17#34#0" expanded="true" />
               </folding>
@@ -67,6 +92,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py" />
+        <option value="$PROJECT_DIR$/project/DQN/DQN-Qube/train.py" />
+        <option value="$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py" />
+        <option value="$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb" />
       </list>
     </option>
   </component>
@@ -122,6 +150,14 @@
               <item name="project" type="462c0819:PsiDirectoryNode" />
               <item name="DQN" type="462c0819:PsiDirectoryNode" />
               <item name="DQN-Qube" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-Qube" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -204,18 +240,10 @@
     <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
             <element signature="e#17#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -227,13 +255,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/storage/qube reward and loss.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/DQN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="58" />
+          <folding>
+            <element signature="e#17#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="264">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding>
             <element signature="e#17#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="21" />
+          <folding>
+            <element signature="e#17#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
         </state>
       </provider>
     </entry>

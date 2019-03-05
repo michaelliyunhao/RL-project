@@ -21,14 +21,16 @@ current_model = torch.load(MODEL_PATH)
 
 if USE_CUDA:
     current_model = current_model.cuda()
+
+
 obs = env.reset()
 s_all, a_all = [], []
 for i in range(3):
-	
-	done = False
-	while not done:
-	    env.render()
-	    obs[4:6] /= 20
+    done = False
+	print(i)
+    while not done:
+        env.render()
+		obs[4:6] /= 20
 	    action = current_model.act(obs, 0)
 	    f_action = 5 * (action - (NUM_ACTIONS - 1) / 2) / ((NUM_ACTIONS - 1) / 2)
 	    obs, rwd, done, info = env.step(f_action)

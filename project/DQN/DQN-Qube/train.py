@@ -71,7 +71,7 @@ for i in range(400):
 
         if len(replay_buffer) > batch_size:
             loss = trainer.compute_td_loss(batch_size)
-            losses.append(loss.data[0])
+            losses.append(loss.item())
 
         if frame_idx % 200 == 0:
             all_rewards.append(episode_reward)
@@ -82,6 +82,7 @@ for i in range(400):
                 print(state," ",reward)
         if frame_idx % 800 == 0:
             trainer.update_target()
+
     torch.save(current_model,"storage/qube_test.ckpt")
     print("finish")
 env.close()
