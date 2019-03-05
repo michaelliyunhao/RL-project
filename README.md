@@ -1,6 +1,6 @@
 # Reinforcement Learning Project
 Technische Universität Darmstadt winter semester 2018/2019
-Supervision: Jan Peters, Samuele Tosatto
+Supervision: Jan Peters, Riad Akrour
 
 ## Authors
 + Zuxin Liu
