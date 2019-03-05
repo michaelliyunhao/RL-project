@@ -22,23 +22,36 @@ current_model = torch.load(MODEL_PATH)
 if USE_CUDA:
     current_model = current_model.cuda()
 
-
-obs = env.reset()
 s_all, a_all = [], []
-for i in range(3):
+
+# data_rr=[]
+data_rr = torch.load("storage/data_rr.pkl")
+n_epoch = 1
+epsilon = 0.3
+
+for i in range(n_epoch):
+    print(i)
+    obs_old = env.reset()
+    obs_old[4:6] /= 20
     done = False
-	print(i)
+    epsilon -=  0.03
     while not done:
+
         env.render()
-		obs[4:6] /= 20
-	    action = current_model.act(obs, 0)
-	    f_action = 5 * (action - (NUM_ACTIONS - 1) / 2) / ((NUM_ACTIONS - 1) / 2)
-	    obs, rwd, done, info = env.step(f_action)
-	    s_all.append(info['s'])
-	    a_all.append(info['a'])
+        action = current_model.act(obs_old, 0.0)
+        f_action = 5 * (action - (NUM_ACTIONS - 1) / 2) / ((NUM_ACTIONS - 1) / 2)
+        obs_new, reward, done, info = env.step(f_action)
+        reward = 100*(reward-0.005)
+        obs_new[4:6] /= 20
+        data_rr.append([obs_old, action[0], reward, obs_new, done])
+        obs_old = obs_new
+        s_all.append(info['s'])
+        a_all.append(info['a'])
 
 env.close()
 
+print("save collected data")
+torch.save(data_rr,"storage/data_rr.pkl")
 
 fig, axes = plt.subplots(5, 1, figsize=(5, 8), tight_layout=True)
 
