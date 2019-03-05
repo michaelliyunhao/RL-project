@@ -45,14 +45,13 @@ Dynamics fitting:
 |  h0_100    | neural networks         |   Adam          |           |   | 4 * 100 * 3   |
 | h1_15     | neural networks        |    Adam        |           |   | 4 * 15 *3
 | h1_30     |  neural networks  |  Adam     |     | |  4 * 30 * 3
-| qube_70_2     | neural networks   |  Adam     |   |   |  7 * 70 * 70 * 6
 | qube_80_2    | neural networks   |  Adam     |  |    | 7 * 100 * 6
 | qube_80_2_new    | neural networks   |  Adam     |  |    | 7 * 80 * 80 * 6
 | qube_80_2_new2    | neural networks   |  Adam     |  |    | 7 * 300 * 300 * 6
 | qube_80_2_new3    | neural networks   |  Adam     |  |    | 7 * 500 * 500 * 6
 | qube_100_1     | neural networks   |  Adam     |  |    | 7 * 100 * 6
 | qube_100_2     | neural networks   |  Adam     |    |  | 7 * 100 * 100 * 6
-| qube_200_2_new     | neural networks   |  Adam     |  |    | 7 * 200 * 200 * 6
+
 
 
 Examples:
