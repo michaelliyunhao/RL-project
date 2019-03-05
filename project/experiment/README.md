@@ -58,9 +58,11 @@ Dynamics fitting:
 
 Examples:
 
-+ model: qube_80_1
++ model:  qube_80_1
 
 ![4](https://github.com/michaelliyunhao/images/blob/master/qube_80_1_try2.png)
+
++ model:  qube_80_1_try2
 
 
 
