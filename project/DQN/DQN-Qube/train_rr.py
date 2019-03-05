@@ -13,8 +13,8 @@ NUM_ACTIONS = 11
 env = GentlyTerminating(gym.make('QubeRR-v0'))
 current_model = DQN(env.observation_space.shape[0], NUM_ACTIONS)
 target_model  = DQN(env.observation_space.shape[0], NUM_ACTIONS)
-current_model = torch.load("storage/qube_test.ckpt")
-target_model  = torch.load("storage/qube_test.ckpt")
+current_model = torch.load("storage/qube.ckpt")
+target_model  = torch.load("storage/qube.ckpt")
 
 if USE_CUDA:
     current_model = current_model.cuda()
