@@ -1,10 +1,33 @@
-# RL-project
+# Reinforcement Learning Project
+Technische Universität Darmstadt winter semester 2018/2019
+Supervision: Jan Peters, Samuele Tosatto
 
+## Authors
++ Zuxin Liu
 
-hhhhhhhhhhhhhh
-hhh
++ Yunhao Li
 
++ Junfei Xiao
 
+## Algorithms
++ DQN
 
++ MPC
 
-哈哈哈
+## Platforms
++ Qube
+
++ Double Pendlum
+
++ Cartpole swing-up
+
+## Installation
+The following Python packages are required:
+
++ Pytorch
+
++ numpy
+
++ gym
+
++ matplotlib
