@@ -32,7 +32,7 @@ To collect the initial random data and create enhance data, we define 3 modes to
 |------|----------|-------------|------|
 | qube_datasets1, qube_labels1  |  70000  | 300 * 100 + 200 * 100 + 200 * 100 |     |
 | qube_datasets2, qube_labels2  |  30000 | 100 * 100 + 100 * 100 + 100 * 100 |    |
-| qube_datasets6_short, qube_labels6_short  |  19200  | 60 * 200 + 60 * 60 + 60 * 60 |   |
+| qube_datasets6_short, qube_labels6_short  |  10800  | 60 * 60 + 60 * 60 + 60 * 60 |   |
 | qube_enhance_datasets1, qube_enhance_labels1 |  5000  |    | collect data from the qube100_1 networks  |
 | qube_enhance_datasets3, qube_enhance_labels3  |  6000  |     |  qube_enhance_datasets1 and 1000 data trained from qube_80_try2 model  |
 
@@ -42,17 +42,17 @@ Dynamics fitting:
 |------|----------|-------------|-----------|---------|--:|
 |  qube_80_1    | neural networks         |   Adam          | qube_enhance_dataset1, qube_enhance_labels1          | enhance data  |  7* 70* 70* 6
 |  qube_80_1_try2    | neural networks         |   Adam          | qube_enhance_dataset1, qube_enhance_labels1          | enhance data  |  7 * 80 * 6
-|  h0_100    | neural networks         |   Adam          |           |   | 4 * 100 * 3   |
-| h1_15     | neural networks        |    Adam        |           |   | 4 * 15 *3
-| h1_30     |  neural networks  |  Adam     |     | |  4 * 30 * 3
-| qube_70_2     | neural networks   |  Adam     |   |   |  7 * 70 * 70 * 6
-| qube_80_2    | neural networks   |  Adam     |  |    | 7 * 100 * 6
-| qube_80_2_new    | neural networks   |  Adam     |  |    | 7 * 80 * 80 * 6
-| qube_80_2_new2    | neural networks   |  Adam     |  |    | 7 * 300 * 300 * 6
-| qube_80_2_new3    | neural networks   |  Adam     |  |    | 7 * 500 * 500 * 6
-| qube_100_1     | neural networks   |  Adam     |  |    | 7 * 100 * 6
-| qube_100_2     | neural networks   |  Adam     |    |  | 7 * 100 * 100 * 6
-| qube_200_2_new     | neural networks   |  Adam     |  |    | 7 * 200 * 200 * 6
+| qube_80_2    | neural networks   |  Adam     | qube_datasets2, qube_labels2   |    | 7 * 100 * 6
+| qube_80_2_new    | neural networks   |  Adam     | qube_datasets2, qube_labels2  |    | 7 * 80 * 80 * 6
+| qube_80_2_new2    | neural networks   |  Adam     | qube_datasets1, qube_labels1 |    | 7 * 300 * 300 * 6
+| qube_80_2_new3    | neural networks   |  Adam     | qube_datasets1, qube_labels1 |    | 7 * 500 * 500 * 6
+| qube_100_1     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short |    | 7 * 100 * 6
+| qube_100_2     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short   |  | 7 * 100 * 100 * 6
+| GPRmodel     | gaussian process model   |        | qube_datasets6_short, qube_labels6_short   |  |   
+
+
+for daynamics fitting, we also try using Gaussian Process Model and auto-sklearn to fit the daynamics function, but the models do not show good performance and the models are too large, so we use neural networks to fit the dynamics function.
+
 
 
 Examples:
