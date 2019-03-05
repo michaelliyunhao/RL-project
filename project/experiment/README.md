@@ -44,13 +44,13 @@ Dynamics fitting:
 |------|----------|-------------|-----------|---------|--:|
 |  qube_70_2    | neural networks         |   Adam          | qube_enhance_dataset1, qube_enhance_labels1          | enhance data  |  7* 70* 70* 6
 |  qube_80_1    | neural networks         |   Adam          | qube_enhance_dataset1, qube_enhance_labels1          | enhance data  |  7 * 80 * 6
-| qube_80_2    | neural networks   |  Adam     | qube_datasets2, qube_labels2   |    | 7 * 80 * 80 * 6
-| qube_80_2_new    | neural networks   |  Adam     | qube_datasets1, qube_labels1  |    | 7 * 80 * 80 * 6
-| qube_80_2_new2    | neural networks   |  Adam     | qube_datasets1, qube_labels1 |    | 7 * 300 * 300 * 6
-| qube_80_2_new3    | neural networks   |  Adam     | qube_datasets1, qube_labels1 |    | 7 * 500 * 500 * 6
-| qube_100_1     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short |    | 7 * 100 * 6
-| qube_100_2     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short   |  | 7 * 100 * 100 * 6
-| GPRmodel     | gaussian process model   |        | qube_datasets6_short, qube_labels6_short   |  |   
+| qube_80_2    | neural networks   |  Adam     | qube_datasets2, qube_labels2   | initial random data   | 7 * 80 * 80 * 6
+| qube_80_2_new    | neural networks   |  Adam     | qube_datasets1, qube_labels1  | initial random data   | 7 * 80 * 80 * 6
+| qube_80_2_new2    | neural networks   |  Adam     | qube_datasets1, qube_labels1 | initial random data   | 7 * 300 * 300 * 6
+| qube_80_2_new3    | neural networks   |  Adam     | qube_datasets1, qube_labels1 | initial random data   | 7 * 500 * 500 * 6
+| qube_100_1     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short |  initial random data  | 7 * 100 * 6
+| qube_100_2     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short   | initial random data | 7 * 100 * 100 * 6
+| GPRmodel     | gaussian process model   |        | qube_datasets6_short, qube_labels6_short   | initial random data |    |
 
 
 for daynamics fitting, we also try using Gaussian Process Model and auto-sklearn to fit the daynamics function, but the models do not show good performance and the models are too large, so we use neural networks to fit the dynamics function.
