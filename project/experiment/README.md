@@ -32,7 +32,7 @@ To collect the initial random data and create enhance data, we define 3 modes to
 |------|----------|-------------|------|
 | qube_datasets1, qube_labels1  |  70000  | 300 * 100 + 200 * 100 + 200 * 100 |     |
 | qube_datasets2, qube_labels2  |  30000 | 100 * 100 + 100 * 100 + 100 * 100 |    |
-| qube_datasets6_short, qube_labels6_short  |  19200  | 60 * 200 + 60 * 60 + 60 * 60 |   |
+| qube_datasets6_short, qube_labels6_short  |  10800  | 60 * 60 + 60 * 60 + 60 * 60 |   |
 | qube_enhance_datasets1, qube_enhance_labels1 |  5000  |    | collect data from the qube100_1 networks  |
 | qube_enhance_datasets3, qube_enhance_labels3  |  6000  |     |  qube_enhance_datasets1 and 1000 data trained from qube_80_try2 model  |
 
