@@ -48,8 +48,10 @@ Dynamics fitting:
 | qube_80_2_new3    | neural networks   |  Adam     | qube_datasets1, qube_labels1 |    | 7 * 500 * 500 * 6
 | qube_100_1     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short |    | 7 * 100 * 6
 | qube_100_2     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short   |  | 7 * 100 * 100 * 6
-| qube_100_2     | gaussian process model   |        | qube_datasets6_short, qube_labels6_short   |  |   
+| GPRmodel     | gaussian process model   |        | qube_datasets6_short, qube_labels6_short   |  |   
 
+
+for daynamics fitting, we also try using Gaussian Process Model and auto-sklearn to fit the daynamics function, but the models do not show good performance and the models are too large, so we use neural networks to fit the dynamics function.
 
 
 
