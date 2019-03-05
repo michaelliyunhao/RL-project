@@ -28,15 +28,14 @@ To collect the initial random data and create enhance data, we define 3 modes to
 
 
 
-| data name |  len  | data architecture |
+| data name |  len  | data architecture |  PS
 |------|----------|-------------|
-| qube_datasets1, qube_labels1  |  70000  | 300 * 100 + 200 * 100 + 200 * 100 |
-| qube_datasets2, qube_labels2  |  30000 | 100 * 100 + 100 * 100 + 100 * 100 |
-| qube_datasets3, qube_labels3  |  collect method  | optimizer |
-| qube_datasets6_short, qube_labels6_short  |  19200  | 60 * 200 + 60 * 60 + 60 * 60 |
-| qube_enhance_datasets1, qube_enhance_labels1 |  collect method  | optimizer |
-| qube_enhance_datasets2, qube_enhance_labels2  |  collect method  | optimizer |
-| qube_enhance_datasets3, qube_enhance_labels3  |  collect method  | optimizer |
+| qube_datasets1, qube_labels1  |  70000  | 300 * 100 + 200 * 100 + 200 * 100 |     |
+| qube_datasets2, qube_labels2  |  30000 | 100 * 100 + 100 * 100 + 100 * 100 |    |
+| qube_datasets6_short, qube_labels6_short  |  19200  | 60 * 200 + 60 * 60 + 60 * 60 |   |
+| qube_enhance_datasets1, qube_enhance_labels1 |  5000  |    | collect data from the qube100_1 networks  |
+| qube_enhance_datasets2, qube_enhance_labels2  |  5000  |     |
+| qube_enhance_datasets3, qube_enhance_labels3  |  6000  |     |  qube_enhance_datasets1 and 1000 
 
 Dynamics fitting:
 
