@@ -48,6 +48,8 @@ Dynamics fitting:
 | qube_80_2_new3    | neural networks   |  Adam     | qube_datasets1, qube_labels1 |    | 7 * 500 * 500 * 6
 | qube_100_1     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short |    | 7 * 100 * 6
 | qube_100_2     | neural networks   |  Adam     | qube_datasets6_short, qube_labels6_short   |  | 7 * 100 * 100 * 6
+| qube_100_2     | gaussian process model   |        | qube_datasets6_short, qube_labels6_short   |  |   
+
 
 
 
