@@ -10,7 +10,7 @@ config = load_config(config_path)
 training_config = config["training_config"]
 config["model_config"]["load_model"] = True
 
-env_id = "CartpoleSwingShort-v0"
+env_id = "DoublePendulum-v0"
 env = GentlyTerminating(gym.make(env_id))
 
 n_episodes = 15

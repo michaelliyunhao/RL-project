@@ -29,7 +29,7 @@ else:
 torch.manual_seed(seed)
 np.random.seed(seed)
 
-env_id = "CartpoleSwingShort-v0"
+env_id = "DoublePendulum-v0"
 env = GentlyTerminating(gym.make(env_id))
 
 policy = Policy(env,config)
@@ -41,7 +41,7 @@ epsilons = []
 for i_episode in range(n_episodes):
     episode_reward = 0
     state = env.reset()
-    state[4] /= 10
+    state[4:6] /= 10
     epsilon = epsilon_by_frame(i_episode)
     epsilons.append(epsilon)
     for step in range(max_episode_step):
@@ -52,7 +52,8 @@ for i_episode in range(n_episodes):
         f_action = 5*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
         next_state, reward, done, _ = env.step(f_action)
 
-        next_state[4]/=10
+        reward = 10*reward
+        next_state[4:6]/=10
 
         policy.replay_buffer.push(state, action[0], reward, next_state, done)
 
@@ -69,7 +70,7 @@ for i_episode in range(n_episodes):
     all_rewards.append(episode_reward)
     avg_rewards.append(np.mean(all_rewards[-10:]))
 
-    if i_episode % 10 == 0:
+    if i_episode % 100 == 0:
         save_fig(i_episode, all_rewards,avg_rewards, losses,epsilons, exp_number)
         print("Exp %s, episode %s, avg episode reward %s" % (exp_number, i_episode, np.mean(all_rewards[-10:])))
 
