@@ -1,61 +1,56 @@
 # coding: utf-8
 
 from DQN import *
-import argparse
-import time
-parser = argparse.ArgumentParser()
-parser.add_argument("--path", help="model name in the storage folder", type=str)
-args = parser.parse_args()
+import numpy as np
+import torch
 
-env_id ="CartpoleSwingShort-v0" # "CartPole-v0"
+config_path = "config.yml"
+print_config(config_path)
+config = load_config(config_path)
+training_config = config["training_config"]
+config["model_config"]["load_model"] = True
+
+env_id = "CartpoleSwingShort-v0"
 env = GentlyTerminating(gym.make(env_id))
 
-MODEL_PATH = "storage/swing-good.ckpt"
+n_episodes = 15
+max_episode_step = 5000
 
-if args.path:
-    MODEL_PATH = "storage/"+args.path
+policy = Policy(env,config)
 
-NUM_ACTIONS = 11
-current_model = torch.load(MODEL_PATH)
-
-if USE_CUDA:
-    current_model = current_model.cuda()
-
-num_frames = 10000
-while True:
-    losses = []
-    all_rewards = []
+losses = []
+all_rewards = []
+avg_rewards = []
+epsilons = []
+for i_episode in range(n_episodes):
     episode_reward = 0
-
     state = env.reset()
-    state[4] /= 10
-    episode_count = 0
-    for frame_idx in range(1, num_frames + 1):
+    state[4]/=10
+    epsilon = 0
+    epsilons.append(epsilon)
+    for step in range(max_episode_step):
         env.render()
-        time.sleep(0.01)
-        epsilon = 0
-        action = current_model.act(state, epsilon)
-        f_action = 16*(action-(NUM_ACTIONS-1)/2)/((NUM_ACTIONS-1)/2)
+        action = policy.act(state, epsilon)
+
+        f_action = 5*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
         next_state, reward, done, _ = env.step(f_action)
 
-        reward = 100*(reward-0.005)
-        next_state[4] /= 10
+        reward = 100*(reward)
+        next_state[4]/=10
+
+        policy.replay_buffer.push(state, action[0], reward, next_state, done)
 
         state = next_state
         episode_reward += reward
-        episode_count +=1
-        if done :#or episode_count>3000:
-            print("done")
-            state = env.reset()
-            episode_count=0
 
-        if frame_idx % 800 == 0:
-            all_rewards.append(episode_reward)
-            episode_reward = 0
-            plot(frame_idx, all_rewards, losses)
-            print(f_action)
-            print(state," ",reward)
+        if done:
+            break
+    print(" episode: %s, episode reward: %s" % (i_episode, episode_reward))
+    all_rewards.append(episode_reward)
+    avg_rewards.append(np.mean(all_rewards[-3:]))
 
-    print("finish")
+
 env.close()
+plot_fig(n_episodes, all_rewards,avg_rewards, losses)
+
 

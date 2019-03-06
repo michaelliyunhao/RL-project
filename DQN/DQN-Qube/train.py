@@ -1,88 +1,88 @@
 # coding: utf-8
 
-import math
 from DQN import *
 import numpy as np
 import torch
-import torch.optim as optim
+
+config_path = "config.yml"
+print_config(config_path)
+config = load_config(config_path)
+training_config = config["training_config"]
+
+seed = training_config["random_seed"]
+n_episodes = training_config["n_episodes"]
+max_episode_step = training_config["max_episode_step"]
+n_update_target = training_config["n_update_target"]
+exp_number = training_config["exp_number"]
+save_model_path = training_config["save_model_path"]
+render_flag = training_config["render"]
+save_best = training_config["save_best"]
 
 
-torch.manual_seed(1234)
-np.random.seed(9)
-NUM_ACTIONS = 11
+if training_config["use_fix_epsilon"]:
+    epsilon_by_frame = lambda frame_idx: training_config["fix_epsilon"]
+else:
+    epsilon_start = training_config["epsilon_start"]
+    epsilon_final = training_config["epsilon_final"]
+    epsilon_decay = training_config["epsilon_decay"]
+    epsilon_by_frame = lambda frame_idx: epsilon_final + (epsilon_start - epsilon_final) * np.exp(-1. * frame_idx / epsilon_decay)
+
+torch.manual_seed(seed)
+np.random.seed(seed)
+
 env_id ="Qube-v0" # "CartPole-v0"
 env = GentlyTerminating(gym.make(env_id))
-current_model = DQN(env.observation_space.shape[0], NUM_ACTIONS)
-target_model  = DQN(env.observation_space.shape[0], NUM_ACTIONS)
-current_model = torch.load("storage/qube_test.ckpt")
-target_model  = torch.load("storage/qube_test.ckpt")
 
-if USE_CUDA:
-    current_model = current_model.cuda()
-    target_model  = target_model.cuda()
-
-replay_buffer = ReplayBuffer(100000)
-
-#weight_decay = 3e-5
-
-learning_rate = 3e-3
-optimizer = optim.Adam(current_model.parameters() ,lr= learning_rate) #,weight_decay = weight_decay)
-epsilon_start = 0.9
-epsilon_final = 0.2
-epsilon_decay = 3000
-
-epsilon_by_frame = lambda frame_idx: epsilon_final + (epsilon_start - epsilon_final) * math.exp(-1. * frame_idx / epsilon_decay)
-
-num_frames = 10000
-batch_size = 64
-gamma      = 0.99
-
-trainer = Trainer(current_model,target_model,replay_buffer,gamma,optimizer)
-trainer.update_target()
+policy = Policy(env,config)
 
 losses = []
 all_rewards = []
-for i in range(400):
-    if i % 10==0:
-        learning_rate = learning_rate * (0.1)
-        optimizer = optim.Adam(current_model.parameters(), lr=learning_rate)
+avg_rewards = []
+epsilons = []
+for i_episode in range(n_episodes):
     episode_reward = 0
     state = env.reset()
     state[4:6]/=20
-    episode_count = 0
-    for frame_idx in range(1, num_frames + 1):
-        env.render()
-        epsilon = 0.2 #epsilon_by_frame(frame_idx)
-        action = current_model.act(state, epsilon)
-        f_action = 5*(action-(NUM_ACTIONS-1)/2)/((NUM_ACTIONS-1)/2)
+    epsilon = epsilon_by_frame(i_episode)
+    epsilons.append(epsilon)
+    for step in range(max_episode_step):
+        if render_flag:
+            env.render()
+        action = policy.act(state, epsilon)
+
+        f_action = 5*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
         next_state, reward, done, _ = env.step(f_action)
 
-        reward = 100*(reward-0.005)
+        reward = 100*(reward)
         next_state[4:6]/=20
 
-        replay_buffer.push(state, action[0], reward, next_state, done)
+        policy.replay_buffer.push(state, action[0], reward, next_state, done)
 
         state = next_state
         episode_reward += reward
-        episode_count +=1
-        if done or episode_count>3000:
-            state = env.reset()
-            episode_count=0
 
-        if len(replay_buffer) > batch_size:
-            loss = trainer.compute_td_loss(batch_size)
+        if done:
+            break
+
+        if len(policy.replay_buffer) > policy.batch_size:
+            loss = policy.train()
             losses.append(loss.item())
 
-        if frame_idx % 200 == 0:
-            all_rewards.append(episode_reward)
-            episode_reward = 0
-            if frame_idx % 9999 == 0:
-                plot(frame_idx, all_rewards, losses)
-                print(f_action)
-                print(state," ",reward)
-        if frame_idx % 800 == 0:
-            trainer.update_target()
+    all_rewards.append(episode_reward)
+    avg_rewards.append(np.mean(all_rewards[-10:]))
 
-    torch.save(current_model,"storage/qube_test.ckpt")
-    print("finish")
+    if i_episode % 100 == 0:
+        save_fig(i_episode, all_rewards,avg_rewards, losses,epsilons, exp_number)
+
+    if i_episode % n_update_target == 0:
+        policy.update_target()
+
+    policy.save_model(save_model_path)
+    if save_best and i_episode>100:
+        ratio = 1.1
+        if episode_reward > ratio*np.mean(all_rewards[-10:]):
+            print("Save model with episode reward %s " % (episode_reward))
+            print("Model path: %s " % (save_model_path))
+            break
+
 env.close()
