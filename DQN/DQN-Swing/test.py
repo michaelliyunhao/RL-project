@@ -2,7 +2,7 @@
 
 from DQN import *
 import numpy as np
-import torch
+import time
 
 config_path = "config.yml"
 print_config(config_path)
@@ -14,7 +14,7 @@ env_id = "CartpoleSwingShort-v0"
 env = GentlyTerminating(gym.make(env_id))
 
 n_episodes = 15
-max_episode_step = 5000
+max_episode_step = 4000
 
 policy = Policy(env,config)
 
@@ -30,6 +30,7 @@ for i_episode in range(n_episodes):
     epsilons.append(epsilon)
     for step in range(max_episode_step):
         env.render()
+        time.sleep(0.001)
         action = policy.act(state, epsilon)
 
         f_action = 5*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
