@@ -69,7 +69,7 @@ for i_episode in range(n_episodes):
     all_rewards.append(episode_reward)
     avg_rewards.append(np.mean(all_rewards[-10:]))
 
-    if i_episode % 100 == 0:
+    if i_episode % 10 == 0:
         save_fig(i_episode, all_rewards,avg_rewards, losses,epsilons, exp_number)
 
     if i_episode % n_update_target == 0:
