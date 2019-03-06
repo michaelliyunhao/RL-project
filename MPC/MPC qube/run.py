@@ -90,7 +90,7 @@ train_datasets ,train_labels = load_dataset(datasets_path, labels_path)
 
 learning_rate = 3e-5
 batch_size = 10
-num_epochs= 2000
+num_epochs= 200
 weight_decay = 1e-4,
 
 train_datasets_norm, train_labels_norm = model.normlize_datasets(train_datasets,train_labels)

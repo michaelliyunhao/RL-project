@@ -1,6 +1,6 @@
 model_config:
     load_model: False # If set true, you must specify the model path, otherwise train a new model
-    model_path: "storage/exp_2.ckpt" # the path to load the model
+    model_path: "storage/epsilon_decay_4000.ckpt" # the path to load the model
     n_actions: 11
     n_hidden: 2 # hidden layer number
     size_hidden: 64 # hidden layer size
