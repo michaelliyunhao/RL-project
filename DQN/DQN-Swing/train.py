@@ -17,6 +17,7 @@ exp_number = training_config["exp_number"]
 save_model_path = training_config["save_model_path"]
 render_flag = training_config["render"]
 save_best = training_config["save_best"]
+save_thres = training_config["save_thres"]
 
 if training_config["use_fix_epsilon"]:
     epsilon_by_frame = lambda frame_idx: training_config["fix_epsilon"]
@@ -77,7 +78,7 @@ for i_episode in range(n_episodes):
         policy.update_target()
 
     policy.save_model(save_model_path)
-    if save_best and i_episode>10:
+    if save_best and i_episode>10 and episode_reward>save_thres:
         ratio = 1.1
         if episode_reward > ratio*np.mean(all_rewards[-10:]):
             print("Save model with episode reward %s " % (episode_reward))

@@ -17,8 +17,6 @@ import yaml
 import os
 import copy
 
-USE_CUDA = torch.cuda.is_available()
-Variable = lambda *args, **kwargs: autograd.Variable(*args, **kwargs).cuda() if USE_CUDA else autograd.Variable(*args, **kwargs)
 
 def load_config(config_path="config.yml"):
     if os.path.isfile(config_path):
@@ -152,7 +150,7 @@ def plot(frame_idx, rewards, losses):
 
 def save_fig(episode, all_rewards, avg_rewards, losses, epsilon, number = 0):
     plt.clf()
-    plt.close()
+    plt.close("all")
     plt.figure(figsize=(8 ,5))
     plt.title('Reward Trend with %s Episodes' % (episode))
     plt.xlabel("episode")
@@ -183,6 +181,10 @@ class Policy(object):
                              model_config["size_hidden"])
         if self.use_cuda:
             self.model=self.model.cuda()
+            self.Variable = lambda *args, **kwargs: autograd.Variable(*args, **kwargs).cuda()
+        else:
+            self.model=self.model.cpu()
+            self.Variable = lambda *args, **kwargs: autograd.Variable(*args, **kwargs)
 
         training_config = config["training_config"]
         self.current_model = self.model
@@ -198,7 +200,7 @@ class Policy(object):
 
     def act(self, state, epsilon):
         if random.random() > epsilon:
-            state   = Variable(torch.FloatTensor(state).unsqueeze(0), volatile=True)
+            state   = self.Variable(torch.FloatTensor(state).unsqueeze(0), volatile=True)
             q_value = self.model.forward(state)
             action  = q_value.max(1)[1].cpu().detach().numpy(  )  # .data[0]
         else:
@@ -217,11 +219,11 @@ class Policy(object):
     def train(self):
         state, action, reward, next_state, done = self.replay_buffer.sample(self.batch_size)
 
-        state      = Variable(torch.FloatTensor(np.float32(state)))
-        next_state = Variable(torch.FloatTensor(np.float32(next_state)))
-        action     = Variable(torch.LongTensor(action))
-        reward     = Variable(torch.FloatTensor(reward))
-        done       = Variable(torch.FloatTensor(done))
+        state      = self.Variable(torch.FloatTensor(np.float32(state)))
+        next_state = self.Variable(torch.FloatTensor(np.float32(next_state)))
+        action     = self.Variable(torch.LongTensor(action))
+        reward     = self.Variable(torch.FloatTensor(reward))
+        done       = self.Variable(torch.FloatTensor(done))
 
         q_values      = self.current_model(state)
         next_q_values = self.current_model(next_state)
@@ -231,7 +233,7 @@ class Policy(object):
         next_q_value = next_q_state_values.gather(1, torch.max(next_q_values, 1)[1].unsqueeze(1)).squeeze(1)
         expected_q_value = reward + self.gamma * next_q_value * (1 - done)
 
-        loss = (q_value - Variable(expected_q_value.data)).pow(2).mean()
+        loss = (q_value - self.Variable(expected_q_value.data)).pow(2).mean()
 
         self.optimizer.zero_grad()
         loss.backward()

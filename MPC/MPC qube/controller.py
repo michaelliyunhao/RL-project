@@ -18,8 +18,6 @@ import time
 # reward = -(theta^2 + 0.1*theta_dt^2 + 0.001*action^2)
 
 def calc_reward(obs, action_n, log=False):
-    
-    
     cos_th, sin_th, cos_al, sin_al, th_d, al_d = obs
     al=np.arccos(cos_al)
     th=np.arccos(cos_th)
@@ -128,7 +126,6 @@ def mpc_dataset_hive(env, model, samples_num, horizon=8, numb_bees=10, max_itrs=
 
 
 def model_validation(env, model, horizons, samples):
-    model = model.eval()
     errors = np.zeros([samples, horizons, 9])  # alpha, cos_th, sin_th,cos_al, sin_al, theta_dt, alpha_dat, reward,theta
     for i in range(samples):
         obs = env.reset()

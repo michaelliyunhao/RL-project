@@ -1,0 +1,17 @@
+model_config:
+    load_model: False # If set true, you must specify the model path, otherwise train a new model
+    model_path: "storage/exp_1.ckpt" # the path to load the model
+    n_states: 6
+    n_actions: 1
+    n_hidden: 1 # hidden layer number
+    size_hidden: 256 # hidden layer size
+    use_cuda: True
+
+training_config:
+    n_epochs: 50 # how many epoches to train
+    learning_rate: 0.001 
+    batch_size: 70
+    save_model_flag: True
+    save_model_path: "storage/exp_1.ckpt" # the path to save the model
+    save_loss_fig: True
+    exp_number: 1  # experiment number

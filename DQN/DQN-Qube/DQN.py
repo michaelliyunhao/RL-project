@@ -152,7 +152,7 @@ def plot(frame_idx, rewards, losses):
 
 def save_fig(episode, all_rewards, avg_rewards, losses, epsilon, number = 0):
     plt.clf()
-    plt.close()
+    plt.close("all")
     plt.figure(figsize=(6 ,5))
     plt.title('Reward Trend with %s Episodes' % (episode))
     plt.xlabel("episode")
