@@ -176,6 +176,7 @@ class DatasetFactory(object):
         self.n_mpc_itrs = dataset_config["n_mpc_itrs"]
         self.save_flag = dataset_config["save_flag"]
         self.save_path = dataset_config["save_path"]
+        self.min_train_samples = dataset_config["min_train_samples"]
         self.random_dataset = None
         self.random_trainset = None
         self.random_testset = None
@@ -269,16 +270,16 @@ class DatasetFactory(object):
 
     def make_dataset(self):
         # calculate how many samples needed from the all datasets
-        all_length = int(self.mpc_dataset_len / self.mpc_dataset_split)
+        all_length = max(int(self.mpc_dataset_len / self.mpc_dataset_split), self.min_train_samples)
         sample_length = all_length - self.mpc_dataset_len
-        sample_length = min(self.all_dataset.shape[0], sample_length)
+        sample_length = min(self.all_dataset["data"].shape[0], sample_length)
         print("Sample %s training data from all previous dataset, total training sample: %s" % (
         sample_length, all_length))
         data_and_label = np.concatenate((self.all_dataset["data"], self.all_dataset["label"]), axis=1)
         # Merge the data and label into one array and then shuffle
         np.random.shuffle(data_and_label)
-        testset_len = min(int(all_length * self.testset_split), self.all_dataset.shape[0])
-        data_len = self.mpc_dataset.shape[1]
+        testset_len = min(int(all_length * self.testset_split), self.all_dataset["data"].shape[0])
+        data_len = self.mpc_dataset["data"].shape[1]
 
         trainset_data = np.concatenate((self.mpc_dataset["data"], data_and_label[:sample_length, :data_len]))
         trainset_label = np.concatenate((self.mpc_dataset["label"], data_and_label[:sample_length, data_len:]))
