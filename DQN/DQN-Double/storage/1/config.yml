@@ -16,7 +16,7 @@ training_config:
     memory_size: 1000000 # replay memory buffer size
     max_episode_step: 3000 # maximum steps per episode
     random_seed: 1234 # do not have to change this parameter
-    save_model_path: "storage/exp_1.ckpt" # the path to save the model
+    save_model_path: "storage/exp_10.ckpt" # the path to save the model
     use_fix_epsilon: False # set true to use a fixed epsilon, otherwise the episilon will decay
     fix_epsilon: 0.3
     epsilon_start: 0.9 # episilon decay start
