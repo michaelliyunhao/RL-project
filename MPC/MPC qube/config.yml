@@ -14,4 +14,19 @@ training_config:
     save_model_flag: True
     save_model_path: "storage/exp_1.ckpt" # the path to save the model
     save_loss_fig: True
+    save_loss_fig_frequency: 30 # how many every epochs to save the loss figure 
     exp_number: 1  # experiment number
+
+dataset_config:
+    n_max_steps: 1000
+    n_random_episodes: 5
+    testset_split: 0.2 # testset's portion in the random dataset, the rest portion is the training set
+    n_mpc_episodes: 5
+
+mpc_config:
+    horizon: 15
+    numb_bees: 8
+    max_itrs: 8 # testset's portion in the random dataset, the rest portion is the training set
+    gamma: 0.9
+    action_low: -5
+    action_high: 5

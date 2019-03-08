@@ -33,19 +33,17 @@ config = load_config(config_path)
 env_id ="Qube-v0" # "CartPole-v0"
 env = GentlyTerminating(gym.make(env_id))
 
-dynamics_model = DynamicModel(config)
+dynamic_model = DynamicModel(config)
 
+dataset_factory = DatasetFactory(env,config)
+dataset_factory.collect_random_dataset()
 
-#datasets_path = 'storage/datasets_hive.pkl'
-#labels_path = 'storage/labels_hive.pkl'
-train_datasets ,train_labels = random_dataset(env, epochs=5, samples_num=100, mode=0, prob=0.25) # load_dataset(datasets_path, labels_path)
-
-
-train_datasets_norm, train_labels_norm = dynamics_model.normlize_datasets(train_datasets,train_labels)
-dynamics_model.train(train_datasets_norm,train_labels_norm, config)
+train_datasets_norm, train_labels_norm = dynamic_model.normlize_datasets(dataset_factory.random_dataset["data"],
+                                                                         dataset_factory.random_dataset["label"])
+dynamic_model.train(train_datasets_norm,train_labels_norm)
 
 print("plot model validation...")
-plot_model_validation(env, dynamics_model,horizons=30, samples=300)
+plot_model_validation(env, dynamic_model,horizons=30, samples=300)
 #evaluate(model,train_datasets_norm,train_labels_norm)
 
 

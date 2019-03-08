@@ -13,10 +13,38 @@ from Hive import Utilities
 import time
 
 
+
+class MPC(object):
+    def __init__(self, env, config):
+        self.env = env
+        mpc_config = config["mpc_config"]
+        self.horizon = mpc_config["horizon"]
+        self.numb_bees = mpc_config["numb_bees"]
+        self.max_itrs = mpc_config["max_itrs"]
+        self.gamma = mpc_config["gamma"]
+        self.action_low = mpc_config["action_low"]
+        self.action_high = mpc_config["action_high"]
+        self.evaluator = Evaluator(self.gamma)
+
+    def act(self, state, dynamic_model):
+        self.evaluator.update(state, dynamic_model)
+        optimizer = Hive.BeeHive( lower = [float(self.action_low)] * self.horizon,
+                                  upper = [float(self.action_high)] * self.horizon,
+                                  fun = self.evaluator.evaluate,
+                                  numb_bees = self.numb_bees,
+                                  max_itrs = self.max_itrs,
+                                  verbose=False)
+        cost = optimizer.run()
+        #  print("Solution: ",hive_model.solution[0])
+        # prints out best solution
+        #  print("Fitness Value ABC: {0}".format(hive_model.best))
+        # plots convergence
+        #  Utilities.ConvergencePlot(cost)
+        return optimizer.solution[0]
+
 # action 逆时针是正
 # decode the obs and calculate the reward
 # reward = -(theta^2 + 0.1*theta_dt^2 + 0.001*action^2)
-
 def calc_reward(obs, action_n, log=False):
     cos_th, sin_th, cos_al, sin_al, th_d, al_d = obs
     al=np.arccos(cos_al)
@@ -31,40 +59,21 @@ def calc_reward(obs, action_n, log=False):
     return reward
 
 class Evaluator(object):
-    def __init__(self, obs, model, gamma=0.8):
-        self.obs = obs
-        self.model = model
+    def __init__(self, gamma=0.8):
         self.gamma = gamma
 
-    def calc_reward(self,obs, action_n, log=False):
-    
-        
-        cos_th, sin_th, cos_al, sin_al, th_d, al_d = obs
-        al=np.arccos(cos_al)
-        th=np.arccos(cos_th)
-        al_mod = al % (2 * np.pi) - np.pi
-        action = action_n * 5
-        cost = al_mod**2 + 5e-3*al_d**2 + 1e-1*th**2 + 2e-2*th_d**2 + 3e-3*action**2
-        reward = np.exp(-cost)*0.02 
-#        if log == True:
-#            print("reward: ", reward, " theta: ", th, " theta_dt: ", th_d, " action: ", action)
-    
-        return reward
+    def update(self, state, dynamic_model):
+        self.state = state
+        self.dynamic_model = dynamic_model
 
     def evaluate(self, actions):
         actions = np.array(actions)
         horizon = actions.shape[0]
         rewards = 0
-        obs_tmp = self.obs.copy()
+        state_tmp = self.state.copy()
         for j in range(horizon):
-            inputs = np.zeros([1, 7])
-            inputs[0, :6] = obs_tmp.reshape(1, -1)
-            inputs[0, 4] = inputs[0, 4] / 30  # scale the theta_dt
-            inputs[0, 5] = inputs[0, 5] / 40  # scale the alpha_dt
-            inputs[0, 6] = actions[j]
-            inputs[inputs > 1] = 1
-            inputs[inputs < -1] = -1
-            obs_dt_n = self.model.predict(inputs)
+
+            state_dt = self.dynamic_model.predict(state_tmp)
             obs_dt_n[0, 4] *= 30  # scale the theta_dt to 30
             obs_dt_n[0, 5] *= 40  # scale the alpha_dt to 40
             obs_tmp = obs_tmp + obs_dt_n[0]
@@ -75,7 +84,17 @@ class Evaluator(object):
                     obs_tmp[i]=-1
             rewards -= (self.gamma ** j) * self.calc_reward(obs_tmp, actions[j], log=False)
         return rewards
-
+    def calc_reward(self,obs, action_n, log=False):
+        cos_th, sin_th, cos_al, sin_al, th_d, al_d = obs
+        al=np.arccos(cos_al)
+        th=np.arccos(cos_th)
+        al_mod = al % (2 * np.pi) - np.pi
+        action = action_n * 5
+        cost = al_mod**2 + 5e-3*al_d**2 + 1e-1*th**2 + 2e-2*th_d**2 + 3e-3*action**2
+        reward = np.exp(-cost)*0.02
+#        if log == True:
+#            print("reward: ", reward, " theta: ", th, " theta_dt: ", th_d, " action: ", action)
+        return reward
 
 def select_action_hive(obs, model, horizon, numb_bees=10, max_itrs=10, gamma=0.8):
     evaluator = Evaluator(obs, model, gamma)

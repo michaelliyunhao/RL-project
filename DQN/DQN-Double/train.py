@@ -49,7 +49,7 @@ for i_episode in range(n_episodes):
             env.render()
         action = policy.act(state, epsilon)
 
-        f_action = 5*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
+        f_action = 6*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
         next_state, reward, done, _ = env.step(f_action)
 
         reward = 10*reward

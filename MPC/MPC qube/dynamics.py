@@ -6,6 +6,7 @@ import torch.autograd as autograd
 import torch.nn.functional as F
 import torch.utils.data as data
 import pickle
+from utils import *
 
 class MLP(nn.Module):
     def __init__(self, n_input=7, n_output=6, n_h=2, size_h=128):
@@ -55,56 +56,49 @@ class DynamicModel(object):
         else:
             self.model = self.model.cpu()
             self.Variable = lambda *args, **kwargs: autograd.Variable(*args, **kwargs)
-
-    def train(self, datasets, labels, config):
         training_config = config["training_config"]
-        n_epochs = training_config["n_epochs"]
-        lr = training_config["learning_rate"]
-        batch_size = training_config["batch_size"]
-        save_model_flag = training_config["save_model_flag"]
-        save_model_path = training_config["save_model_path"]
-        exp_number = training_config["exp_number"]
-        save_loss_fig = training_config["save_loss_fig"]
-        criterion = nn.MSELoss(reduction='elementwise_mean')
-        optimizer = torch.optim.Adam(self.model.parameters(), lr=lr)
+        self.n_epochs = training_config["n_epochs"]
+        self.lr = training_config["learning_rate"]
+        self.batch_size = training_config["batch_size"]
+        self.save_model_flag = training_config["save_model_flag"]
+        self.save_model_path = training_config["save_model_path"]
+        self.exp_number = training_config["exp_number"]
+        self.save_loss_fig = training_config["save_loss_fig"]
+        self.save_loss_fig_frequency = training_config["save_loss_fig_frequency"]
+        self.criterion = nn.MSELoss(reduction='elementwise_mean')
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
+
+    def train(self, datasets, labels):
         train_dataset = MyDataset(datasets, labels)
-        train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+        train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True)
         total_step = len(train_loader)
         print(f"Total training step per epoch [{total_step}]")
         #show_step = int(total_step / 3)
         loss_epochs = []
-        for epoch in range(1, n_epochs + 1):
+        for epoch in range(1, self.n_epochs + 1):
             loss_this_epoch = []
             for i, (datas, labels) in enumerate(train_loader):
                 datas = self.Variable(torch.FloatTensor(np.float32(datas)))
                 labels = self.Variable(torch.FloatTensor(np.float32(labels)))
-                optimizer.zero_grad()
+                self.optimizer.zero_grad()
                 outputs = self.model(datas)
-                loss = criterion(outputs, labels)
+                loss = self.criterion(outputs, labels)
                 loss.backward()
-                optimizer.step()
+                self.optimizer.step()
                 loss_this_epoch.append(loss.item())
                 #if (i + 1) % show_step == 0:
                 #    print(f"Epoch [{epoch}/{n_epochs}], Step [{i+1}/{total_step}], Loss: {loss.item():.8f}")
             loss_epochs.append(np.mean(loss_this_epoch))
-            if save_model_flag:
-                torch.save(self.model, save_model_path)
-            if save_loss_fig and epoch % 20 == 0:
-                plt.clf()
-                plt.close()
-                plt.figure(figsize=(12, 5))
-                plt.subplot(121)
-                plt.title('Loss Trend with Latest %s Epochs' % (epoch))
-                plt.plot(loss_epochs)
-                plt.subplot(122)
-                plt.title('Loss Trend in the %s Epoch' % (epoch))
-                plt.plot(loss_this_epoch)
-                plt.savefig("storage/loss-" + str(exp_number) + ".png")
-                print(f"Epoch [{epoch}/{n_epochs}], Loss: {np.mean(loss_this_epoch):.8f}")
+            if self.save_model_flag:
+                torch.save(self.model, self.save_model_path)
+            if self.save_loss_fig and epoch % self.save_loss_fig_frequency == 0:
+                self.save_figure(epoch, loss_epochs, loss_this_epoch)
+                print(f"Epoch [{epoch}/{self.n_epochs}], Loss: {np.mean(loss_this_epoch):.8f}")
         return loss_epochs
 
     # input a 1d numpy array and return a numpy array
     def predict(self, x):
+        x = np.array(x)
         x = self.pre_process(x)
         x_tensor = self.Variable(torch.FloatTensor(x).unsqueeze(0), volatile=True) # not sure here
         out_tensor = self.model(x_tensor)
@@ -129,20 +123,59 @@ class DynamicModel(object):
         labels = (labels - self.mean_label) / self.std_label
         return datas, labels
 
+    #TODO: not sure whether we need this
+    def validate_model(self, datasets, labels):
+        test_dataset = MyDataset(datasets, labels)
+        test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=self.batch_size)
+        loss_list = []
+        for i, (datas, labels) in enumerate(test_loader):
+            datas = self.Variable(torch.FloatTensor(np.float32(datas)))
+            labels = self.Variable(torch.FloatTensor(np.float32(labels)))
+            outputs = self.model(datas)
+            loss = self.criterion(outputs, labels)
+            loss_list.append(loss.item())
+        loss_avr = np.average(loss_list)
+        print(f"Model validation... average loss: {loss_avr:.4f} ")
+        #plt.plot(loss_list)
+        #plt.show()
+
+    def save_figure(self, epoch, loss_epochs,loss_this_epoch):
+        plt.clf()
+        plt.close("all")
+        plt.figure(figsize=(12, 5))
+        plt.subplot(121)
+        plt.title('Loss Trend with Latest %s Epochs' % (epoch))
+        plt.plot(loss_epochs)
+        plt.subplot(122)
+        plt.title('Loss Trend in the %s Epoch' % (epoch))
+        plt.plot(loss_this_epoch)
+        plt.savefig("storage/loss-" + str(self.exp_number) + ".png")
+
 class DatasetFactory(object):
     def __init__(self, env, config):
         self.env = env
-        self.random_dataset = []
+        dataset_config = config["dataset_config"]
+        self.n_max_steps = dataset_config["n_max_steps"]
+        self.n_random_episodes = dataset_config["n_random_episodes"]
+        self.testset_split = dataset_config["testset_split"]
+        self.n_mpc_episodes = dataset_config["n_mpc_episodes"]
 
-    # numpy array
-    def collect_random_dataset(self, episodes=5, n_max_steps=1000):
-        datasets = []
-        labels = []
-        for i in range(episodes):
+        self.all_dataset = None
+        self.random_dataset = None
+        self.random_trainset = None
+        self.random_testset = None
+        self.mpc_dataset = None
+        self.trainset = None
+
+    # numpy array, collect n_random_episodes data with maximum n_max_steps steps per episode
+    def collect_random_dataset(self):
+        datasets = None
+        labels = None
+        for i in range(self.n_random_episodes):
             data_tmp = []
             label_tmp = []
             state_old = self.env.reset()
-            for j in range(n_max_steps):
+            for j in range(self.n_max_steps):
                 action = self.env.action_space.sample()
                 data_tmp.append(np.concatenate((state_old,action)))
                 state_new, reward, done, info = self.env.step(action)
@@ -150,83 +183,63 @@ class DatasetFactory(object):
                 if done:
                     break
                 state_old = state_new
-            datasets.append(data_tmp)
-            labels.append(label_tmp)
-        datasets = np.array(datasets)
-        labels = np.array(labels)
+            data_tmp = np.array(data_tmp)
+            label_tmp = np.array(label_tmp)
+            if datasets == None:
+                datasets = data_tmp
+            else:
+                datasets = np.concatenate((datasets,data_tmp))
+            if labels == None:
+                labels = label_tmp
+            else:
+                labels = np.concatenate((labels,label_tmp))
+        data_and_label = np.concatenate((datasets, labels), axis=1)
+        # Merge the data and label into one array and then shuffle
+        np.random.shuffle(data_and_label)
+        print("Collect random dataset shape: ", datasets.shape)
+        testset_len = int(datasets.shape[0] * self.testset_split)
+        data_len = datasets.shape[1]
+        self.random_testset = {"data": data_and_label[:testset_len, :data_len],
+                               "label": data_and_label[:testset_len, data_len:]}
+        self.random_trainset = {"data": data_and_label[testset_len:, :data_len],
+                               "label": data_and_label[testset_len:, data_len:]}
         self.random_dataset = {"data":datasets, "label":labels}
-        return datasets, labels
+        self.all_dataset = self.random_dataset
 
-class MyDataset(data.Dataset):
-    def __init__(self, datas, labels):
-        self.datas = torch.tensor(datas)
-        self.labels = torch.tensor(labels)
+    def collect_mpc_dataset(self,mpc,dynamic_model):
+        datasets = None
+        labels = None
+        for i in range(self.n_mpc_episodes):
+            data_tmp = []
+            label_tmp = []
+            state_old = self.env.reset()
+            for j in range(self.n_max_steps):
+                action = mpc.act(state_old, dynamic_model)
+                data_tmp.append(np.concatenate((state_old, action)))
+                state_new, reward, done, info = self.env.step(action)
+                label_tmp.append(state_new - state_old)
+                if done:
+                    break
+                state_old = state_new
+            data_tmp = np.array(data_tmp)
+            label_tmp = np.array(label_tmp)
+            if datasets == None:
+                datasets = data_tmp
+            else:
+                datasets = np.concatenate((datasets,data_tmp))
+            if labels == None:
+                labels = label_tmp
+            else:
+                labels = np.concatenate((labels,label_tmp))
+        self.mpc_dataset = {"data": datasets, "label": labels}
+        all_datasets = np.concatenate((datasets, self.all_dataset["data"]))
+        all_labels = np.concatenate((labels, self.all_dataset["label"]))
+        self.all_dataset = {"data": all_datasets, "label": all_labels}
 
-    def __getitem__(self, index):  # return tensor
-        datas, target = self.datas[index], self.labels[index]
-        return datas, target
-
-    def __len__(self):
-        return len(self.datas)
-
-def min_max_scaler(d_in):  # scale the data to the range [0,1]
-    d_max = np.max(d_in)
-    d_min = np.min(d_in)
-    d_out = (d_in - d_min) / (d_max - d_min)
-    return d_out, d_min, d_max
-
-
-
-
-
-
-
-def model_evaluation(model, test_loader, device=torch.device('cuda'),
-                     criterion = nn.MSELoss(reduction='elementwise_mean')):
-    model = model.eval()
-    total_step = len(test_loader)
-    loss_list = []
-    for i, (images, labels) in enumerate(test_loader):
-        # Move tensors to the configured device
-        images = images.to(device).float()
-        labels = labels.to(device).float()
-        # Forward pass
-        outputs = model(images)
-        loss = criterion(outputs, labels)
-        loss_list.append(loss.item())
-    loss_avr = np.average(loss_list)
-    loss_max = np.max(loss_list)
-    loss_min = np.min(loss_list)
-    loss_std = np.std(loss_list)
-    print(f"Average: {loss_avr:.4f}, max: {loss_max:.4f}, min: {loss_min:.4f}, std: {loss_std:.4f}, ")
-    plt.plot(np.arange(total_step), loss_list)
-    plt.show()
+    def sample_from_dataset(self, dataset, sample_size):
+        pass
 
 
-def evaluate(model, datasets,labels,device=torch.device('cuda'),
-             criterion = nn.MSELoss(reduction='elementwise_mean')):
-    model = model.eval()
-    test_dataset = MyDataset(datasets, labels)
-    test_loader = torch.utils.data.DataLoader(test_dataset, batch_size = 1)
-    total_step=len(test_loader)
-    loss_test_list = []
-    for i, (data, labels) in enumerate(test_loader):
-        # Move tensors to the configured device
-        data = data.to(device).float()
-        labels = labels.to(device).float()
-        # Forward pass
-        outputs = model(data)
-        loss = criterion(outputs, labels)
-        loss_test_list.append(loss.item())
-    loss_avr=np.average(loss_test_list)
-    loss_max=np.max(loss_test_list)
-    loss_min=np.min(loss_test_list)
-    loss_std=np.std(loss_test_list)
-    print(f"Test dataset average: {loss_avr:.8f}, max: {loss_max:.8f}, min: {loss_min:.8f}, std: {loss_std:.8f}, ")
-    fig = plt.figure(figsize=(16,3))
-    plt.plot(np.arange(total_step),loss_test_list)
-    plt.title("Test Loss")
-    plt.show()
 
 
 def random_dataset_old_version(env, epochs=5, samples_num=1000, mode=0, prob=0.25):

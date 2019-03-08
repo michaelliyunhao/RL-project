@@ -3,6 +3,20 @@ import pickle
 import os
 import yaml
 import numpy as np
+import torch.nn.functional as F
+import torch.utils.data as data
+
+class MyDataset(data.Dataset):
+    def __init__(self, datas, labels):
+        self.datas = torch.tensor(datas)
+        self.labels = torch.tensor(labels)
+
+    def __getitem__(self, index):  # return tensor
+        datas, target = self.datas[index], self.labels[index]
+        return datas, target
+
+    def __len__(self):
+        return len(self.datas)
 
 def load_dataset(f1 = './storage/datasets_hive.pkl', f2 = './storage/labels_hive.pkl'):
     print("Load datas from %s" % f1)
@@ -76,3 +90,9 @@ def anylize_env(env, test_episodes = 100,max_episode_step = 500, render = False)
     print(" average reward per episode: %s, std: %s " % (np.mean(rewards), np.std(rewards) ))
     print(" average steps per episode: ", np.mean(steps))
     print(" average reward per step: ", np.sum(rewards)/np.sum(steps))
+
+def min_max_scaler(d_in):  # scale the data to the range [0,1]
+    d_max = np.max(d_in)
+    d_min = np.min(d_in)
+    d_out = (d_in - d_min) / (d_max - d_min)
+    return d_out, d_min, d_max
