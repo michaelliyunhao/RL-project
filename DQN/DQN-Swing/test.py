@@ -14,7 +14,7 @@ env_id = "CartpoleSwingShort-v0"
 env = GentlyTerminating(gym.make(env_id))
 
 n_episodes = 15
-max_episode_step = 4000
+max_episode_step = training_config["max_episode_step"]
 
 policy = Policy(env,config)
 

@@ -25,18 +25,18 @@ epsilons = []
 for i_episode in range(n_episodes):
     episode_reward = 0
     state = env.reset()
-    state[3:5]/=10
+  #  state[3:5]/=10
     epsilon = 0
     epsilons.append(epsilon)
     for step in range(max_episode_step):
         env.render()
-        time.sleep(0.001)
+        time.sleep(0.003)
         action = policy.act(state, epsilon)
 
-        f_action = 6*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
+        f_action = 12*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
         next_state, reward, done, _ = env.step(f_action)
 
-        next_state[3:5]/=10
+      #  next_state[3:5]/=10
 
         policy.replay_buffer.push(state, action[0], reward, next_state, done)
 

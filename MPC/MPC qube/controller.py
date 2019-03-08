@@ -42,22 +42,6 @@ class MPC(object):
         #  Utilities.ConvergencePlot(cost)
         return optimizer.solution[0]
 
-# action 逆时针是正
-# decode the obs and calculate the reward
-# reward = -(theta^2 + 0.1*theta_dt^2 + 0.001*action^2)
-def calc_reward(obs, action_n, log=False):
-    cos_th, sin_th, cos_al, sin_al, th_d, al_d = obs
-    al=np.arccos(cos_al)
-    th=np.arccos(cos_th)
-    al_mod = al % (2 * np.pi) - np.pi
-    action = action_n * 5
-    cost = al_mod**2 + 5e-3*al_d**2 + 1e-1*th**2 + 2e-2*th_d**2 + 3e-3*action**2
-    reward = np.exp(-cost)*0.02
-#    if log == True:
-#        print("reward: ", reward, " theta: ", th, " theta_dt: ", th_d, " action: ", action)
-    
-    return reward
-
 class Evaluator(object):
     def __init__(self, gamma=0.8):
         self.gamma = gamma
@@ -72,45 +56,22 @@ class Evaluator(object):
         rewards = 0
         state_tmp = self.state.copy()
         for j in range(horizon):
-
             state_dt = self.dynamic_model.predict(state_tmp)
-            obs_dt_n[0, 4] *= 30  # scale the theta_dt to 30
-            obs_dt_n[0, 5] *= 40  # scale the alpha_dt to 40
-            obs_tmp = obs_tmp + obs_dt_n[0]
-            for i in range(4):
-                if obs_tmp[i]>1:
-                    obs_tmp[i]=1
-                elif obs_tmp[i]<-1:
-                    obs_tmp[i]=-1
-            rewards -= (self.gamma ** j) * self.calc_reward(obs_tmp, actions[j], log=False)
+            state_tmp = state_tmp + state_dt[0]
+            rewards -= (self.gamma ** j) * self.get_reward(state_tmp, actions[j])
         return rewards
-    def calc_reward(self,obs, action_n, log=False):
+
+    def get_reward(self,obs, action_n):
         cos_th, sin_th, cos_al, sin_al, th_d, al_d = obs
+        cos_th = min(max(cos_th, -1), 1)
+        cos_al = min(max(cos_al, -1), 1)
         al=np.arccos(cos_al)
         th=np.arccos(cos_th)
         al_mod = al % (2 * np.pi) - np.pi
         action = action_n * 5
         cost = al_mod**2 + 5e-3*al_d**2 + 1e-1*th**2 + 2e-2*th_d**2 + 3e-3*action**2
         reward = np.exp(-cost)*0.02
-#        if log == True:
-#            print("reward: ", reward, " theta: ", th, " theta_dt: ", th_d, " action: ", action)
         return reward
-
-def select_action_hive(obs, model, horizon, numb_bees=10, max_itrs=10, gamma=0.8):
-    evaluator = Evaluator(obs, model, gamma)
-    hive_model = Hive.BeeHive(lower=[-1.] * horizon,
-                              upper=[1.] * horizon,
-                              fun=evaluator.evaluate,
-                              numb_bees=numb_bees,
-                              max_itrs=max_itrs,
-                              verbose=False)
-    cost = hive_model.run()
-    #  print("Solution: ",hive_model.solution[0])
-    # prints out best solution
-    #  print("Fitness Value ABC: {0}".format(hive_model.best))
-    # plots convergence
-    #  Utilities.ConvergencePlot(cost)
-    return hive_model.solution[0] * 5
 
 
 def mpc_dataset_hive(env, model, samples_num, horizon=8, numb_bees=10, max_itrs=10, gamma=0.8):

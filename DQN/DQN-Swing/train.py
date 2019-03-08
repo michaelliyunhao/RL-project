@@ -68,9 +68,9 @@ for i_episode in range(n_episodes):
             losses.append(loss.item())
 
     all_rewards.append(episode_reward)
-    avg_rewards.append(np.mean(all_rewards[-10:]))
+    avg_rewards.append(np.mean(all_rewards[-5:]))
 
-    if i_episode % 10 == 0:
+    if i_episode % 2 == 0:
         save_fig(i_episode, all_rewards,avg_rewards, losses,epsilons, exp_number)
         print("Exp %s, episode %s, avg episode reward %s" % (exp_number, i_episode, np.mean(all_rewards[-10:])))
 
