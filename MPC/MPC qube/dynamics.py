@@ -65,10 +65,14 @@ class DynamicModel(object):
         self.exp_number = training_config["exp_number"]
         self.save_loss_fig = training_config["save_loss_fig"]
         self.save_loss_fig_frequency = training_config["save_loss_fig_frequency"]
-        self.criterion = nn.MSELoss(reduction='elementwise_mean')
+        self.criterion = nn.MSELoss(reduction='mean')
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.lr)
 
-    def train(self, datasets, labels):
+    # trainset is a dictionary
+    def train(self, trainset, testset=0):
+        datasets, labels = self.norm_train_data(trainset["data"],trainset["label"])
+        if testset != 0:
+            test_datasets, test_labels = self.norm_test_data(testset["data"],testset["label"])
         train_dataset = MyDataset(datasets, labels)
         train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True)
         total_step = len(train_loader)
@@ -93,7 +97,10 @@ class DynamicModel(object):
                 torch.save(self.model, self.save_model_path)
             if self.save_loss_fig and epoch % self.save_loss_fig_frequency == 0:
                 self.save_figure(epoch, loss_epochs, loss_this_epoch)
-                print(f"Epoch [{epoch}/{self.n_epochs}], Loss: {np.mean(loss_this_epoch):.8f}")
+                if testset != 0:
+                    loss_test = self.validate_model(test_datasets, test_labels)
+                print(f"Epoch [{epoch}/{self.n_epochs}], Training Loss: {np.mean(loss_this_epoch):.8f}, "
+                      f"Test Loss: {loss_test:.8f}")
         return loss_epochs
 
     # input a 1d numpy array and return a numpy array
@@ -114,11 +121,16 @@ class DynamicModel(object):
         x = x * self.std_label + self.mean_label
         return x
 
-    def normlize_datasets(self, datas, labels):
+    def norm_train_data(self, datas, labels):
         self.mean_data = np.mean(datas, axis=0)
         self.mean_label = np.mean(labels, axis=0)
         self.std_data = np.std(datas, axis=0)
         self.std_label = np.std(labels, axis=0)
+        datas = (datas - self.mean_data) / self.std_data
+        labels = (labels - self.mean_label) / self.std_label
+        return datas, labels
+
+    def norm_test_data(self, datas, labels):
         datas = (datas - self.mean_data) / self.std_data
         labels = (labels - self.mean_label) / self.std_label
         return datas, labels
@@ -135,37 +147,45 @@ class DynamicModel(object):
             loss = self.criterion(outputs, labels)
             loss_list.append(loss.item())
         loss_avr = np.average(loss_list)
-        print(f"Model validation... average loss: {loss_avr:.4f} ")
-        #plt.plot(loss_list)
-        #plt.show()
+        return loss_avr
 
     def save_figure(self, epoch, loss_epochs,loss_this_epoch):
         plt.clf()
         plt.close("all")
         plt.figure(figsize=(12, 5))
         plt.subplot(121)
-        plt.title('Loss Trend with Latest %s Epochs' % (epoch))
+        plt.title('Loss Trend with %s Epochs' % (epoch))
         plt.plot(loss_epochs)
         plt.subplot(122)
-        plt.title('Loss Trend in the %s Epoch' % (epoch))
+        plt.title('Loss Trend in the latest Epoch')
         plt.plot(loss_this_epoch)
         plt.savefig("storage/loss-" + str(self.exp_number) + ".png")
+
 
 class DatasetFactory(object):
     def __init__(self, env, config):
         self.env = env
         dataset_config = config["dataset_config"]
+        self.load_flag = dataset_config["load_flag"]
+        self.load_path = dataset_config["load_path"]
         self.n_max_steps = dataset_config["n_max_steps"]
         self.n_random_episodes = dataset_config["n_random_episodes"]
         self.testset_split = dataset_config["testset_split"]
         self.n_mpc_episodes = dataset_config["n_mpc_episodes"]
-
-        self.all_dataset = None
+        self.mpc_dataset_split = dataset_config["mpc_dataset_split"]
+        self.n_mpc_itrs = dataset_config["n_mpc_itrs"]
+        self.save_flag = dataset_config["save_flag"]
+        self.save_path = dataset_config["save_path"]
         self.random_dataset = None
         self.random_trainset = None
         self.random_testset = None
         self.mpc_dataset = None
+        self.mpc_dataset_len = 0
         self.trainset = None
+        if self.load_flag:
+            self.all_dataset = self.load_dataset()
+        else:
+            self.all_dataset = None
 
     # numpy array, collect n_random_episodes data with maximum n_max_steps steps per episode
     def collect_random_dataset(self):
@@ -177,44 +197,6 @@ class DatasetFactory(object):
             state_old = self.env.reset()
             for j in range(self.n_max_steps):
                 action = self.env.action_space.sample()
-                data_tmp.append(np.concatenate((state_old,action)))
-                state_new, reward, done, info = self.env.step(action)
-                label_tmp.append( state_new-state_old )
-                if done:
-                    break
-                state_old = state_new
-            data_tmp = np.array(data_tmp)
-            label_tmp = np.array(label_tmp)
-            if datasets == None:
-                datasets = data_tmp
-            else:
-                datasets = np.concatenate((datasets,data_tmp))
-            if labels == None:
-                labels = label_tmp
-            else:
-                labels = np.concatenate((labels,label_tmp))
-        data_and_label = np.concatenate((datasets, labels), axis=1)
-        # Merge the data and label into one array and then shuffle
-        np.random.shuffle(data_and_label)
-        print("Collect random dataset shape: ", datasets.shape)
-        testset_len = int(datasets.shape[0] * self.testset_split)
-        data_len = datasets.shape[1]
-        self.random_testset = {"data": data_and_label[:testset_len, :data_len],
-                               "label": data_and_label[:testset_len, data_len:]}
-        self.random_trainset = {"data": data_and_label[testset_len:, :data_len],
-                               "label": data_and_label[testset_len:, data_len:]}
-        self.random_dataset = {"data":datasets, "label":labels}
-        self.all_dataset = self.random_dataset
-
-    def collect_mpc_dataset(self,mpc,dynamic_model):
-        datasets = None
-        labels = None
-        for i in range(self.n_mpc_episodes):
-            data_tmp = []
-            label_tmp = []
-            state_old = self.env.reset()
-            for j in range(self.n_max_steps):
-                action = mpc.act(state_old, dynamic_model)
                 data_tmp.append(np.concatenate((state_old, action)))
                 state_new, reward, done, info = self.env.step(action)
                 label_tmp.append(state_new - state_old)
@@ -226,61 +208,94 @@ class DatasetFactory(object):
             if datasets == None:
                 datasets = data_tmp
             else:
-                datasets = np.concatenate((datasets,data_tmp))
+                datasets = np.concatenate((datasets, data_tmp))
             if labels == None:
                 labels = label_tmp
             else:
-                labels = np.concatenate((labels,label_tmp))
+                labels = np.concatenate((labels, label_tmp))
+        data_and_label = np.concatenate((datasets, labels), axis=1)
+        # Merge the data and label into one array and then shuffle
+        np.random.shuffle(data_and_label)
+        print("Collect random dataset shape: ", datasets.shape)
+        testset_len = int(datasets.shape[0] * self.testset_split)
+        data_len = datasets.shape[1]
+        self.random_testset = {"data": data_and_label[:testset_len, :data_len],
+                               "label": data_and_label[:testset_len, data_len:]}
+        self.random_trainset = {"data": data_and_label[testset_len:, :data_len],
+                                "label": data_and_label[testset_len:, data_len:]}
+        self.random_dataset = {"data": datasets, "label": labels}
+        self.all_dataset = self.random_dataset
+
+    def collect_mpc_dataset(self, mpc, dynamic_model):
+        datasets = None
+        labels = None
+        reward_episodes = []
+        for i in range(self.n_mpc_episodes):
+            data_tmp = []
+            label_tmp = []
+            reward_episode = 0
+            state_old = self.env.reset()
+            for j in range(self.n_max_steps):
+                action = mpc.act(state_old, dynamic_model)
+                action = np.array([action])
+                data_tmp.append(np.concatenate((state_old, action)))
+                state_new, reward, done, info = self.env.step(action)
+                reward_episode += reward
+                label_tmp.append(state_new - state_old)
+                if done:
+                    break
+                state_old = state_new
+            data_tmp = np.array(data_tmp)
+            label_tmp = np.array(label_tmp)
+            if datasets == None:
+                datasets = data_tmp
+            else:
+                datasets = np.concatenate((datasets, data_tmp))
+            if labels == None:
+                labels = label_tmp
+            else:
+                labels = np.concatenate((labels, label_tmp))
+            reward_episodes.append(reward_episode)
+            print(f"Episode [{i}/{self.n_mpc_episodes}], Reward: {reward_episode:.8f}")
         self.mpc_dataset = {"data": datasets, "label": labels}
+        self.mpc_dataset_len = datasets.shape[0]
+        print("Totally collect %s data based on MPC" % self.mpc_dataset_len)
         all_datasets = np.concatenate((datasets, self.all_dataset["data"]))
         all_labels = np.concatenate((labels, self.all_dataset["label"]))
         self.all_dataset = {"data": all_datasets, "label": all_labels}
+        if self.save_flag:
+            self.save_datasets(self.all_dataset)
+        return reward_episodes
 
-    def sample_from_dataset(self, dataset, sample_size):
-        pass
+    def make_dataset(self):
+        # calculate how many samples needed from the all datasets
+        all_length = int(self.mpc_dataset_len / self.mpc_dataset_split)
+        sample_length = all_length - self.mpc_dataset_len
+        sample_length = min(self.all_dataset.shape[0], sample_length)
+        print("Sample %s training data from all previous dataset, total training sample: %s" % (
+        sample_length, all_length))
+        data_and_label = np.concatenate((self.all_dataset["data"], self.all_dataset["label"]), axis=1)
+        # Merge the data and label into one array and then shuffle
+        np.random.shuffle(data_and_label)
+        testset_len = min(int(all_length * self.testset_split), self.all_dataset.shape[0])
+        data_len = self.mpc_dataset.shape[1]
 
+        trainset_data = np.concatenate((self.mpc_dataset["data"], data_and_label[:sample_length, :data_len]))
+        trainset_label = np.concatenate((self.mpc_dataset["label"], data_and_label[:sample_length, data_len:]))
+        testset_data = data_and_label[testset_len:, :data_len]
+        testset_label = data_and_label[testset_len:, data_len:]
+        trainset = {"data": trainset_data, "label": trainset_label}
+        testset = {"data": testset_data, "label": testset_label}
+        return trainset, testset
 
+    # Save dictionary dataset
+    def save_datasets(self,data):
+        print("Saving all datas to %s" % self.save_path)
+        with open(self.save_path, 'wb') as f:  # open file with write-mode
+            pickle.dump(data, f, -1)  # serialize and save object
 
-
-def random_dataset_old_version(env, epochs=5, samples_num=1000, mode=0, prob=0.25):
-    datasets = np.zeros([samples_num * epochs, 7])
-    labels = np.zeros([samples_num * epochs, 6])
-    for j in range(epochs):
-        obs_old = env.reset()
-        for i in range(samples_num):
-            if mode == 0:
-                action = env.action_space.sample()
-            elif mode == 1:
-                if np.random.uniform() < prob:
-                    action = -np.random.uniform() * 3
-                    action = np.array([action])
-                else:
-                    action = np.random.uniform() * 3
-                    action = np.array([action])
-            elif mode == -1:
-                if np.random.uniform() < prob:
-                    action = np.random.uniform() * 3
-                    action = np.array([action])
-                else:
-                    action = -np.random.uniform() * 3
-                    action = np.array([action])
-
-            datasets[j * samples_num + i, 0] = obs_old[0]
-            datasets[j * samples_num + i, 1] = obs_old[1]
-            datasets[j * samples_num + i, 2] = obs_old[2]
-            datasets[j * samples_num + i, 3] = obs_old[3]
-            datasets[j * samples_num + i, 4] = obs_old[4] / 30.
-            datasets[j * samples_num + i, 5] = obs_old[5] / 40.
-            datasets[j * samples_num + i, 6] = action / 5.
-
-            # env.render()
-            action = np.array(action)
-            obs, reward, done, info = env.step(action)
-            labels[j * samples_num + i, 0] = obs[0] - obs_old[0]
-            labels[j * samples_num + i, 1] = obs[1] - obs_old[1]
-            labels[j * samples_num + i, 2] = obs[2] - obs_old[2]
-            labels[j * samples_num + i, 3] = obs[3] - obs_old[3]
-            labels[j * samples_num + i, 4] = (obs[4] / 30.) - (obs_old[4] / 30.)
-            labels[j * samples_num + i, 5] = (obs[5] / 40.) - (obs_old[5] / 40.)
-            obs_old = obs
-    return datasets, labels
+    def load_dataset(self):
+        print("Load datas from %s" % self.load_path)
+        with open(self.load_path, 'rb') as f:
+            dataset = pickle.load(f)
+        return dataset

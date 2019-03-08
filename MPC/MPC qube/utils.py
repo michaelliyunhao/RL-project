@@ -18,26 +18,6 @@ class MyDataset(data.Dataset):
     def __len__(self):
         return len(self.datas)
 
-def load_dataset(f1 = './storage/datasets_hive.pkl', f2 = './storage/labels_hive.pkl'):
-    print("Load datas from %s" % f1)
-    with open(f1, 'rb') as f:
-        train_datasets = pickle.load(f)
-    print("Load labels from %s" % f2)
-    with open(f2, 'rb') as f:
-        train_labels = pickle.load(f)
-    print("Datasets shape: %s" % (np.shape(train_datasets)))
-    return train_datasets, train_labels
-
-def save_datasets(train_datasets, train_labels,
-                  name_train = "datasets1", name_label="labels1" ):
-    datasets_path = "./storage/" + name_train + ".pkl"
-    labels_path = "./storage/" + name_label + ".pkl"
-    with open(datasets_path, 'wb') as f:  # open file with write-mode
-        pickle.dump(train_datasets, f, -1)  # serialize and save object
-
-    with open(labels_path, 'wb') as f:  # open file with write-mode
-        pickle.dump(train_labels, f, -1)  # serialize and save object
-
 def load_config(config_path="config.yml"):
     if os.path.isfile(config_path):
         f = open(config_path)
@@ -55,6 +35,11 @@ def print_config(config_path="config.yml"):
         print("*** train configuration ***")
         print(yaml.dump(config["training_config"], default_flow_style=False, default_style=''))
         print("************************")
+        print("*** dataset configuration ***")
+        print(yaml.dump(config["dataset_config"], default_flow_style=False, default_style=''))
+        print("************************")
+        print("*** MPC controller configuration ***")
+        print(yaml.dump(config["mpc_config"], default_flow_style=False, default_style=''))
     else:
         raise Exception("Configuration file is not found in the path: "+config_path)
 

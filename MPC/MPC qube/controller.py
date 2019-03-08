@@ -13,7 +13,6 @@ from Hive import Utilities
 import time
 
 
-
 class MPC(object):
     def __init__(self, env, config):
         self.env = env
@@ -35,11 +34,9 @@ class MPC(object):
                                   max_itrs = self.max_itrs,
                                   verbose=False)
         cost = optimizer.run()
-        #  print("Solution: ",hive_model.solution[0])
-        # prints out best solution
-        #  print("Fitness Value ABC: {0}".format(hive_model.best))
-        # plots convergence
-        #  Utilities.ConvergencePlot(cost)
+        #print("Solution: ",optimizer.solution[0])
+        #print("Fitness Value ABC: {0}".format(optimizer.best))
+        #Utilities.ConvergencePlot(cost)
         return optimizer.solution[0]
 
 class Evaluator(object):
@@ -56,7 +53,8 @@ class Evaluator(object):
         rewards = 0
         state_tmp = self.state.copy()
         for j in range(horizon):
-            state_dt = self.dynamic_model.predict(state_tmp)
+            input_data = np.concatenate( (state_tmp,[actions[j]]) )
+            state_dt = self.dynamic_model.predict(input_data)
             state_tmp = state_tmp + state_dt[0]
             rewards -= (self.gamma ** j) * self.get_reward(state_tmp, actions[j])
         return rewards
@@ -72,38 +70,6 @@ class Evaluator(object):
         cost = al_mod**2 + 5e-3*al_d**2 + 1e-1*th**2 + 2e-2*th_d**2 + 3e-3*action**2
         reward = np.exp(-cost)*0.02
         return reward
-
-
-def mpc_dataset_hive(env, model, samples_num, horizon=8, numb_bees=10, max_itrs=10, gamma=0.8):
-    model = model.eval()
-    datasets = np.zeros([samples_num, 7])
-    labels = np.zeros([samples_num, 6])
-    obs_old = env.reset()
-    for i in range(samples_num):
-        env.render()
-        action = [select_action_hive(obs_old, model, horizon, numb_bees=numb_bees,
-                                     max_itrs=max_itrs, gamma=gamma)]
-        action = np.array(action)
-        # calc_reward(obs_old,action[0]/2,log=True)
-        datasets[i, 0] = obs_old[0]
-        datasets[i, 1] = obs_old[1]
-        datasets[i, 2] = obs_old[2] 
-        datasets[i, 3] = obs_old[3] 
-        datasets[i, 4] = obs_old[4] / 30.
-        datasets[i, 5] = obs_old[5] / 40.
-        datasets[i, 6] = action[0] / 5.
-        obs, reward, done, info = env.step(action)
-        labels[i, 0] = obs[0] - obs_old[0]
-        labels[i, 1] = obs[1] - obs_old[1]
-        labels[i, 2] = obs[2] - obs_old[2]
-        labels[i, 3] = obs[3] - obs_old[3]
-        labels[i, 4] = (obs[4] / 30.) - (obs_old[4] / 30.)
-        labels[i, 5] = (obs[5] / 40.) - (obs_old[5] / 40.)
-        obs_old = obs
-    env.close()
-    return datasets, labels
-
-
 
 def model_validation(env, model, horizons, samples):
     errors = np.zeros([samples, horizons, 9])  # alpha, cos_th, sin_th,cos_al, sin_al, theta_dt, alpha_dat, reward,theta

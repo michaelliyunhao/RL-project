@@ -58,7 +58,7 @@ def ConvergencePlot(cost):
     plt.plot(range(len(cost["best"])), cost["best"], label=labels[0]);
     plt.scatter(range(len(cost["mean"])), cost["mean"], color='red', label=labels[1]);
     plt.xlabel("Iteration",fontsize=fs);
-    plt.ylabel("Max VSR",fontsize=fs);
+    plt.ylabel("Cost",fontsize=fs);
     plt.xticks(fontsize=10)
     plt.yticks(fontsize=10)
     plt.legend(loc="best", prop = font);
