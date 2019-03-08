@@ -177,21 +177,21 @@ class DatasetFactory(object):
         self.save_flag = dataset_config["save_flag"]
         self.save_path = dataset_config["save_path"]
         self.min_train_samples = dataset_config["min_train_samples"]
-        self.random_dataset = None
-        self.random_trainset = None
-        self.random_testset = None
-        self.mpc_dataset = None
+        self.random_dataset = []
+        self.random_trainset = []
+        self.random_testset = []
+        self.mpc_dataset = []
         self.mpc_dataset_len = 0
-        self.trainset = None
+        self.trainset = []
         if self.load_flag:
             self.all_dataset = self.load_dataset()
         else:
-            self.all_dataset = None
+            self.all_dataset = []
 
     # numpy array, collect n_random_episodes data with maximum n_max_steps steps per episode
     def collect_random_dataset(self):
-        datasets = None
-        labels = None
+        datasets = []
+        labels = []
         for i in range(self.n_random_episodes):
             data_tmp = []
             label_tmp = []
@@ -206,11 +206,11 @@ class DatasetFactory(object):
                 state_old = state_new
             data_tmp = np.array(data_tmp)
             label_tmp = np.array(label_tmp)
-            if datasets == None:
+            if datasets == []:
                 datasets = data_tmp
             else:
                 datasets = np.concatenate((datasets, data_tmp))
-            if labels == None:
+            if labels == []:
                 labels = label_tmp
             else:
                 labels = np.concatenate((labels, label_tmp))
@@ -228,8 +228,8 @@ class DatasetFactory(object):
         self.all_dataset = self.random_dataset
 
     def collect_mpc_dataset(self, mpc, dynamic_model):
-        datasets = None
-        labels = None
+        datasets = []
+        labels = []
         reward_episodes = []
         for i in range(self.n_mpc_episodes):
             data_tmp = []
@@ -248,11 +248,11 @@ class DatasetFactory(object):
                 state_old = state_new
             data_tmp = np.array(data_tmp)
             label_tmp = np.array(label_tmp)
-            if datasets == None:
+            if datasets == []:
                 datasets = data_tmp
             else:
                 datasets = np.concatenate((datasets, data_tmp))
-            if labels == None:
+            if labels == []:
                 labels = label_tmp
             else:
                 labels = np.concatenate((labels, label_tmp))
