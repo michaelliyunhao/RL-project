@@ -5,63 +5,39 @@ from dynamics import *
 from controller import *
 from utils import *
 from quanser_robots.common import GentlyTerminating
+import time
 
 # datasets:  numpy array, size:[sample number, input dimension]
 # labels:  numpy array, size:[sample number, output dimension]
 
-def mpc_iteration_hive(env, model,train_datasets, train_labels, sample_num = 500,
-                       horizon = 10, numb_bees = 10, max_itrs = 10, gamma = 0.85,
-                       model_name = "emmm"):
-    learning_rate = 3e-5
-    batch_size = 20
-    num_epochs= 50
-    weight_decay = 1e-4
-
-    train_datasets_new, train_labels_new = mpc_dataset_hive(env, model, sample_num, horizon, numb_bees, max_itrs, gamma)
-    train_datasets = np.concatenate( (train_datasets,train_datasets_new) )
-    train_labels = np.concatenate( (train_labels,train_labels_new) )
-
-    train_datasets_norm, train_labels_norm = model.normlize_datasets(train_datasets,train_labels)
-    train(model,train_datasets_norm,train_labels_norm,
-          learning_rate,batch_size, num_epochs,weight_decay,model_name)
-    return train_datasets, train_labels
-
-config_path = "config.yml"
-print_config(config_path)
-config = load_config(config_path)
-
 env_id ="Qube-v0" # "CartPole-v0"
 env = GentlyTerminating(gym.make(env_id))
+config_path = "config.yml"
+config = load_config(config_path)
+print_config(config_path)
 
-dynamic_model = DynamicModel(config)
+model = DynamicModel(config)
 
-dataset_factory = DatasetFactory(env,config)
-dataset_factory.collect_random_dataset()
+data_fac = DatasetFactory(env,config)
+data_fac.collect_random_dataset()
 
-train_datasets_norm, train_labels_norm = dynamic_model.normlize_datasets(dataset_factory.random_dataset["data"],
-                                                                         dataset_factory.random_dataset["label"])
-dynamic_model.train(train_datasets_norm,train_labels_norm)
+loss = model.train(data_fac.random_trainset,data_fac.random_testset)
 
-print("plot model validation...")
-plot_model_validation(env, dynamic_model,horizons=30, samples=300)
-#evaluate(model,train_datasets_norm,train_labels_norm)
+mpc = MPC(env,config)
 
+rewards_list = []
+for itr in range(config["dataset_config"]["n_mpc_itrs"]):
+    t = time.time()
+    print("**********************************************")
+    print("The reinforce process [%s], collecting data ..." % itr)
+    rewards = data_fac.collect_mpc_dataset(mpc, model)
+    trainset, testset = data_fac.make_dataset()
+    rewards_list += rewards
 
-#sample_num = 600
-#train_datasets, train_labels = mpc_iteration_hive(env, \
-#                                                  model,train_datasets, \
-#                                                  train_labels, sample_num = sample_num, \
-#                                                  horizon = 15, numb_bees = 8, \
-#                                                  max_itrs = 10, gamma = 0.95, model_name=model_name)
-
-
-
-'''
-num = 5
-for i in range(num):
-    prob = i/num
-    test_datasets1, test_labels1 = random_dataset(env, epochs = 20, samples_num = 200, mode = 1, prob=prob)
-    test_datasets1_norm,test_labels1_norm = normlize_datasets(test_datasets1, test_labels1)
-    evaluate(model,test_datasets1_norm,test_labels1_norm)
-'''
-
+    plt.close("all")
+    plt.figure(figsize=(12, 5))
+    plt.title('Reward Trend with %s iteration' % itr)
+    plt.plot(rewards_list)
+    plt.savefig("storage/reward-" + str(model.exp_number) + ".png")
+    print("Consume %s s in this iteration" % (time.time() - t))
+    loss = model.train(trainset, testset)
