@@ -7,7 +7,7 @@ model_config:
     use_cuda: True
 
 training_config:
-    render: False # render the environment, set false to accelerate training. test.py does not need this parameter
+    render: True # render the environment, set false to accelerate training. test.py does not need this parameter
     n_episodes: 20000 # how many episodes to train
     learning_rate: 0.0001
     batch_size: 32

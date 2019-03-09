@@ -1,6 +1,6 @@
 model_config:
     load_model: False # If set true, you must specify the model path, otherwise train a new model
-    model_path: "storage/exp_5.ckpt" # the path to load the model
+    model_path: "storage/exp_6.ckpt" # the path to load the model
     n_states: 6 # environment states
     n_actions: 1 # how many controls we need
     n_hidden: 2 # hidden layer number
@@ -12,14 +12,14 @@ training_config:
     learning_rate: 0.0006 
     batch_size: 64
     save_model_flag: True
-    save_model_path: "storage/exp_5.ckpt" # the path to save the model
+    save_model_path: "storage/exp_6.ckpt" # the path to save the model
     save_loss_fig: True
     save_loss_fig_frequency: 100 # how many every epochs to save the loss figure 
-    exp_number: 5  # experiment number
+    exp_number: 6  # experiment number
 
 dataset_config:
     load_flag: False 
-    load_path: "storage/data_exp_5.pkl"     
+    load_path: "storage/data_exp_6.pkl"     
     n_max_steps: 500 # maximum steps per episode
     n_random_episodes: 30 # how many random episodes' data to fit the initial dynamic model
     testset_split: 0.2 # testset's portion in the random dataset, the rest portion is the training set
@@ -28,7 +28,7 @@ dataset_config:
     min_train_samples: 6000
     n_mpc_itrs: 100 # the number to perform reinforce iteration
     save_flag: True # set True if you want to save all the dataset
-    save_path: "storage/data_exp_5.pkl"
+    save_path: "storage/data_exp_6.pkl"
 
 # MPC controller configuration
 mpc_config:
