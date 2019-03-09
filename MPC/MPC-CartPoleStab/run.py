@@ -10,7 +10,7 @@ import time
 # datasets:  numpy array, size:[sample number, input dimension]
 # labels:  numpy array, size:[sample number, output dimension]
 
-env_id ="Qube-v0" # "CartPole-v0"
+env_id = "CartpoleStabShort-v0"
 env = GentlyTerminating(gym.make(env_id))
 config_path = "config.yml"
 config = load_config(config_path)

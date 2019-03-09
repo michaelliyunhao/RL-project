@@ -59,15 +59,10 @@ class Evaluator(object):
             rewards -= (self.gamma ** j) * self.get_reward(state_tmp, actions[j])
         return rewards
 
+    # need to change this function according to different environment
     def get_reward(self,obs, action_n):
-        cos_th, sin_th, cos_al, sin_al, th_d, al_d = obs
+        x, sin_th, cos_th, x_dot, theta_dot = obs
         cos_th = min(max(cos_th, -1), 1)
-        cos_al = min(max(cos_al, -1), 1)
-        al=np.arccos(cos_al)
-        th=np.arccos(cos_th)
-        al_mod = al % (2 * np.pi) - np.pi
-        action = action_n * 5
-        cost = al_mod**2 + 5e-3*al_d**2 + 1e-1*th**2 + 2e-2*th_d**2 + 3e-3*action**2
-        reward = np.exp(-cost)*0.02
+        reward = -cos_th + 1
         return reward
 

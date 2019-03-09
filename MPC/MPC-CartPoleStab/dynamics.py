@@ -135,7 +135,6 @@ class DynamicModel(object):
         labels = (labels - self.mean_label) / self.std_label
         return datas, labels
 
-    #TODO: not sure whether we need this
     def validate_model(self, datasets, labels):
         test_dataset = MyDataset(datasets, labels)
         test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=self.batch_size)
@@ -161,6 +160,53 @@ class DynamicModel(object):
         plt.plot(loss_this_epoch)
         plt.savefig("storage/loss-" + str(self.exp_number) + ".png")
 
+    def model_validation(self,env, horizon=40, n_sample=200, mpc=[]):
+        n_state = env.observation_space.shape[0]
+        errors = np.zeros([n_sample, horizon, n_state])
+        for i in range(n_sample):
+            state = env.reset()
+            state_pred = state.copy()
+            state_real = state.copy()
+            for j in range(horizon):  # predicted results
+                if mpc != []:
+                    action = mpc.act(state_pred, self)
+                    action = np.array([action])
+                else:
+                    action = env.action_space.sample()
+                input_data = np.concatenate((state_pred, action))
+                state_dt = self.predict(input_data)
+                state_pred = state_pred + state_dt[0]
+                state_real, reward, done, info = env.step(action)
+                error_tmp = state_real - state_pred
+                errors[i, j] = abs(error_tmp)
+        errors_mean = np.mean(errors, axis=0)
+        errors_max = np.max(errors, axis=0)
+        errors_min = np.min(errors, axis=0)
+        errors_std = np.min(errors, axis=0)
+        return errors_mean, errors_max, errors_min, errors_std
+
+    def plot_model_validation(self, env, horizon=40, n_sample=200, mpc=[], mode="mean"):
+        if mode == "mean":
+            errors = self.model_validation(env, horizon, n_sample, mpc)[0]
+        elif mode == "max":
+            errors = self.model_validation(env, horizon, n_sample, mpc)[1]
+        elif mode == "min":
+            errors = self.model_validation(env, horizon, n_sample, mpc)[2]
+        elif mode == "std":
+            errors = self.model_validation(env, horizon, n_sample, mpc)[3]
+        else:
+            return 0
+        plt.close("all")
+        plt.ioff()
+        plt.figure(figsize=[12, 6])
+        plt.title(mode + " state error between the predictive model and real world along different horizons")
+        plt.xlabel("horizon")
+        plt.ylabel("error")
+        for i in range(errors.shape[1]):
+            plt.plot(errors[:, i], label='state ' + str(i))
+            plt.legend()
+        plt.savefig("storage/model_error_exp_"+str(self.exp_number)+".png")
+        plt.show()
 
 class DatasetFactory(object):
     def __init__(self, env, config):
