@@ -27,7 +27,7 @@ data_fac = DatasetFactory(env,config)
 data_fac.collect_random_dataset()
 
 loss = model.train(data_fac.random_trainset,data_fac.random_testset)
-
+model.plot_model_validation(env,n_sample=200)
 mpc = MPC(env,config)
 
 rewards_list = []

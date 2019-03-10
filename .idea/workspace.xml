@@ -2,9 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/exp_2.ckpt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/loss-2.png" />
+      <change beforePath="$PROJECT_DIR$/.idea/RL-project.iml" afterPath="$PROJECT_DIR$/.idea/RL-project.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/config.yml" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/config.yml" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/loss-4.png" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/loss-4.png" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/reward-4.png" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/reward-4.png" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/DQN.py" afterPath="$PROJECT_DIR$/DQN/DQN-Double/DQN.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/test.py" afterPath="$PROJECT_DIR$/DQN/DQN-Double/test.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/train.py" afterPath="$PROJECT_DIR$/DQN/DQN-Double/train.py" />
       <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/DQN.py" afterPath="$PROJECT_DIR$/DQN/DQN-Qube/DQN.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/test.py" afterPath="$PROJECT_DIR$/DQN/DQN-Qube/test.py" />
       <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/train.py" afterPath="$PROJECT_DIR$/DQN/DQN-Qube/train.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/DQN.py" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/DQN.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/test.py" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/test.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/train.py" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/train.py" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-1.yml" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-1.yml" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-2.yml" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-2.yml" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-3.yml" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-3.yml" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-4.yml" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-4.yml" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-5.yml" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-5.yml" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/run.py" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/run.py" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/data_exp_1.pkl" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/data_exp_1.pkl" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/exp_1.ckpt" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/exp_1.ckpt" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/loss-1.png" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/loss-1.png" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/reward-1.png" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/reward-1.png" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/workspace.xml" afterPath="$PROJECT_DIR$/MPC/MPC-Double/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/data_exp_1.pkl" afterPath="$PROJECT_DIR$/MPC/MPC-Double/storage/data_exp_1.pkl" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/exp_1.ckpt" afterPath="$PROJECT_DIR$/MPC/MPC-Double/storage/exp_1.ckpt" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/loss-1.png" afterPath="$PROJECT_DIR$/MPC/MPC-Double/storage/loss-1.png" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/reward-1.png" afterPath="$PROJECT_DIR$/MPC/MPC-Double/storage/reward-1.png" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/test.ipynb" afterPath="$PROJECT_DIR$/MPC/MPC-Double/test.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +47,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DQN.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/DQN.py">
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1097">
-              <caret line="123" column="43" lean-forward="false" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
+            <state relative-caret-position="192">
+              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DQN.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1104">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#17#30#0" expanded="true" />
               </folding>
@@ -28,18 +72,41 @@
         </entry>
       </file>
       <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train.py">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+            <state relative-caret-position="264">
+              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding>
-                <element signature="e#17#28#0" expanded="true" />
+                <element signature="e#17#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>cuda</find>
+      <find>save</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,7 +119,17 @@
         <option value="$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py" />
         <option value="$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb" />
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/DQN.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/util.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Double/train.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Double/test.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/train.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Qube/test.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Swing/train.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Swing/test.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/utils.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py" />
       </list>
     </option>
   </component>
@@ -63,8 +140,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="x" value="54" />
+    <option name="y" value="48" />
     <option name="width" value="1615" />
     <option name="height" value="1026" />
   </component>
@@ -84,8 +161,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,13 +179,24 @@
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
               <item name="DQN" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN-Qube" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-CartPoleStab" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
               <item name="DQN" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN-Qube-Save" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-Swing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC-Double" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -119,7 +207,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DQN/DQN-Qube" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -150,21 +238,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1615" height="1026" extended-state="0" />
+    <frame x="54" y="48" width="1615" height="1026" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16099072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16099072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -185,122 +274,149 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/DQN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/storage/qube reward and loss.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/DQN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube-Save/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/DQN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1097">
-          <caret line="123" column="43" lean-forward="false" selection-start-line="123" selection-start-column="43" selection-end-line="123" selection-end-column="43" />
+        <state relative-caret-position="2592">
+          <caret line="123" column="31" lean-forward="true" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
           <folding>
-            <element signature="e#17#30#0" expanded="true" />
+            <element signature="e#17#30#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="720">
           <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/DQN.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train_rr.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/storage/qube reward and loss.png" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py" />
+    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/DQN.py" />
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube-Save/train.py" />
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/DQN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
           <folding>
-            <element signature="e#17#28#0" expanded="true" />
+            <element signature="e#17#30#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/DQN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="200" column="83" lean-forward="false" selection-start-line="200" selection-start-column="70" selection-end-line="200" selection-end-column="83" />
+          <folding>
+            <element signature="e#17#30#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding>
+            <element signature="e#17#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#17#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding>
+            <element signature="e#17#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding>
+            <element signature="e#17#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding>
+            <element signature="e#17#34#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#17#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#17#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

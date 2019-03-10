@@ -1,8 +1,8 @@
 # coding: utf-8
 
 from DQN import *
-import numpy as np
-import torch
+import gym
+from quanser_robots.common import GentlyTerminating
 
 config_path = "config.yml"
 print_config(config_path)

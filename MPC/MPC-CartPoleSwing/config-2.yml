@@ -1,4 +1,4 @@
-# change the mpc horizon w.r.t. config 1 to compare
+# change the mpc horizon and network architecture w.r.t. config 1 to compare
 
 model_config:
     load_model: False # If set true, you must specify the model path, otherwise train a new model
@@ -22,10 +22,10 @@ training_config:
 dataset_config:
     load_flag: False 
     load_path: "storage/data_exp_2.pkl"     
-    n_max_steps: 1000 # maximum steps per episode
-    n_random_episodes: 800 # how many random episodes' data to fit the initial dynamic model
+    n_max_steps: 2000 # maximum steps per episode
+    n_random_episodes: 80 # how many random episodes' data to fit the initial dynamic model
     testset_split: 0.2 # testset's portion in the random dataset, the rest portion is the training set
-    n_mpc_episodes: 4 # how many episodes data sampled with the MPC controller
+    n_mpc_episodes: 2 # how many episodes data sampled with the MPC controller
     mpc_dataset_split: 0.5 # mpc dataset's portion in the training set
     min_train_samples: 6000
     n_mpc_itrs: 100 # the number to perform reinforce iteration
@@ -34,7 +34,7 @@ dataset_config:
 
 # MPC controller configuration
 mpc_config:
-    horizon: 5 # how long of the horizon to predict
+    horizon: 20 # how long of the horizon to predict
     numb_bees: 8 # ABC optimization algorithm param: number of the bees
     max_itrs: 20 # max iterations for the ABC optimization
     gamma: 0.99 # reward discount coefficient

@@ -1,7 +1,8 @@
 # coding: utf-8
 
 from DQN import *
-import numpy as np
+import gym
+from quanser_robots.common import GentlyTerminating
 import time
 
 config_path = "config.yml"
