@@ -14,13 +14,10 @@ training_config:
     save_model_flag: True
     save_model_path: "storage/exp_7.ckpt" # the path to save the model
     save_loss_fig: True
-<<<<<<< HEAD
     save_loss_fig_frequency: 10 # how many every epochs to save the loss figure 
     exp_number: 5  # experiment number
-=======
     save_loss_fig_frequency: 100 # how many every epochs to save the loss figure 
     exp_number: 7  # experiment number
->>>>>>> 37b206e8fd4fe992e22bef430453db4a2d9e01b7
 
 dataset_config:
     load_flag: False 
@@ -39,12 +36,9 @@ dataset_config:
 mpc_config:
     horizon: 15 # how long of the horizon to predict
     numb_bees: 8 # ABC optimization algorithm param: number of the bees
-<<<<<<< HEAD
     max_itrs: 15 # max iterations for the ABC optimization
     gamma: 0.98 # reward discount coefficient
-=======
     max_itrs: 40 # max iterations for the ABC optimization
     gamma: 0.8 # reward discount coefficient
->>>>>>> 37b206e8fd4fe992e22bef430453db4a2d9e01b7
     action_low: -5 # lower bound of the solution space
     action_high: 5 # upper bound of the solution space

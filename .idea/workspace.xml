@@ -2,17 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/data_exp_2.pkl" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/data_exp_2.pkl" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/exp_2.ckpt" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/exp_2.ckpt" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/loss-2.png" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/loss-2.png" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/reward-2.png" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/reward-2.png" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/data_exp_1.pkl" afterPath="$PROJECT_DIR$/MPC/MPC-Double/storage/data_exp_1.pkl" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/exp_1.ckpt" afterPath="$PROJECT_DIR$/MPC/MPC-Double/storage/exp_1.ckpt" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/loss-1.png" afterPath="$PROJECT_DIR$/MPC/MPC-Double/storage/loss-1.png" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/reward-1.png" afterPath="$PROJECT_DIR$/MPC/MPC-Double/storage/reward-1.png" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/test.ipynb" afterPath="$PROJECT_DIR$/MPC/MPC-Double/test.ipynb" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/Angle Error h_0 100.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/State Error h_0 100.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/config-4.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/config-5.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/config-6.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/data_exp_1.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/data_exp_2.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/data_exp_3.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/data_exp_4.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/data_exp_5.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/data_exp_6.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/data_exp_7.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/datasets_hive.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/exp_3.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/exp_4.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/exp_5.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/exp_6.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/exp_7.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/labels_hive.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/loss-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/loss-2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/loss-3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/loss-4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/loss-5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/loss-6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/loss-7.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/reward-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/reward-2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/reward-3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/reward-4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/reward-5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/reward-6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC qube/storage/reward-7.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
