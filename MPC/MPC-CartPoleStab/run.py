@@ -1,20 +1,25 @@
 # coding: utf-8
 import gym
-import torch.utils.data as data
+import argparse
 from dynamics import *
 from controller import *
 from utils import *
 from quanser_robots.common import GentlyTerminating
 import time
 
-# datasets:  numpy array, size:[sample number, input dimension]
-# labels:  numpy array, size:[sample number, output dimension]
+parser = argparse.ArgumentParser(description='Specify the configuraton file path')
+parser.add_argument('--path', required=False, type=str, default='config.yml',
+                    help='Specify the configuraton file path')
+
+
+args = parser.parse_args()
+
+config_path = args.path # "config.yml"
+config = load_config(config_path)
+print_config(config_path)
 
 env_id = "CartpoleStabShort-v0"
 env = GentlyTerminating(gym.make(env_id))
-config_path = "config.yml"
-config = load_config(config_path)
-print_config(config_path)
 
 model = DynamicModel(config)
 
