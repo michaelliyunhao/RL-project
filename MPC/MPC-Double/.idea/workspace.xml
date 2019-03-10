@@ -14,8 +14,8 @@
       <file leaf-file-name="dynamics.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dynamics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="188" column="8" lean-forward="false" selection-start-line="188" selection-start-column="8" selection-end-line="208" selection-end-column="18" />
+            <state relative-caret-position="354">
+              <caret line="305" column="87" lean-forward="false" selection-start-line="305" selection-start-column="87" selection-end-line="305" selection-end-column="117" />
               <folding />
             </state>
           </provider>
@@ -356,8 +356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="188" column="8" lean-forward="false" selection-start-line="188" selection-start-column="8" selection-end-line="208" selection-end-column="18" />
+        <state relative-caret-position="354">
+          <caret line="305" column="87" lean-forward="false" selection-start-line="305" selection-start-column="87" selection-end-line="305" selection-end-column="117" />
           <folding />
         </state>
       </provider>

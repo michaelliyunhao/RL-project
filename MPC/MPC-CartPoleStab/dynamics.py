@@ -303,7 +303,7 @@ class DatasetFactory(object):
             else:
                 labels = np.concatenate((labels, label_tmp))
             reward_episodes.append(reward_episode)
-            print(f"Episode [{i}/{self.n_mpc_episodes}], Reward: {reward_episode:.8f}")
+            print(f"Episode [{i}/{self.n_mpc_episodes}], Reward: {reward_episode:.8f}, Step: [{j}/{self.n_max_steps}]")
         self.mpc_dataset = {"data": datasets, "label": labels}
         self.mpc_dataset_len = datasets.shape[0]
         print("Totally collect %s data based on MPC" % self.mpc_dataset_len)
