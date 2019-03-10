@@ -18,7 +18,9 @@ def test():
 
     n_episodes = 10
     max_episode_step = 10000
+    print("*********************************************")
     print("Testing the model for 10 episodes with 10000 maximum steps per episode")
+    print("*********************************************")
 
     policy = Policy(env,config)
 
