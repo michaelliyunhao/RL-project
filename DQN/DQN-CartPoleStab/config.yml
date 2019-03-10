@@ -4,7 +4,7 @@ model_config:
     n_actions: 9
     n_hidden: 2 # hidden layer number
     size_hidden: 128 # hidden layer size
-    use_cuda: True
+    use_cuda: False
 
 training_config:
     render: True # render the environment, set false to accelerate training. test.py does not need this parameter

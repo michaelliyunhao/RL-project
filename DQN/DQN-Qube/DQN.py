@@ -1,92 +1,35 @@
 # coding: utf-8
 
 import random
-
+import torch
 import torch.nn as nn
 import torch.autograd as autograd
-import torch
 import torch.optim as optim
-
-import matplotlib.pyplot as plt
-from quanser_robots.common import GentlyTerminating
-from collections import deque
-import gym
 import numpy as np
-import torch
-import yaml
-import os
 import copy
-
-USE_CUDA = torch.cuda.is_available()
-Variable = lambda *args, **kwargs: autograd.Variable(*args, **kwargs).cuda() if USE_CUDA else autograd.Variable(*args, **kwargs)
-
-def load_config(config_path="config.yml"):
-    if os.path.isfile(config_path):
-        f = open(config_path)
-        return yaml.load(f)
-    else:
-        raise Exception("Configuration file is not found in the path: "+config_path)
-
-def print_config(config_path="config.yml"):
-    if os.path.isfile(config_path):
-        f = open(config_path)
-        config = yaml.load(f)
-        print("************************")
-        print("*** model configuration ***")
-        print(yaml.dump(config["model_config"], default_flow_style=False, default_style=''))
-        print("*** train configuration ***")
-        print(yaml.dump(config["training_config"], default_flow_style=False, default_style=''))
-        print("************************")
-    else:
-        raise Exception("Configuration file is not found in the path: "+config_path)
-
-def anylize_env(env, test_episodes = 100,max_episode_step = 500, render = False):
-    print("state space shape: ", env.observation_space.shape)
-    print("state space lower bound: ", env.observation_space.low)
-    print("state space upper bound: ", env.observation_space.high)
-    print("action space shape: ", env.action_space.shape)
-    print("action space lower bound: ", env.action_space.low)
-    print("action space upper bound: ", env.action_space.high)
-    print("reward range: ", env.reward_range)
-    rewards = []
-    steps = []
-    for episode in range(test_episodes):
-        env.reset()
-        step = 0
-        episode_reward = 0
-        for _ in range(max_episode_step):
-            if render:
-                env.render()
-            step += 1
-            action = env.action_space.sample()
-            next_state, reward, done, _ = env.step(action)
-            episode_reward += reward
-            if done:
-               # print("done with step: %s " % (step))
-                break
-        steps.append(step)
-        rewards.append(episode_reward)
-    env.close()
-    print("Randomly sample actions for %s episodes, with maximum %s steps per episodes"
-          % (test_episodes, max_episode_step))
-    print(" average reward per episode: %s, std: %s " % (np.mean(rewards), np.std(rewards) ))
-    print(" average steps per episode: ", np.mean(steps))
-    print(" average reward per step: ", np.sum(rewards)/np.sum(steps))
+from collections import deque
+from utils import *
 
 class MLP(nn.Module):
+    '''A simple implementation of the multi-layer neural network'''
     def __init__(self, n_input=4, n_output=3, n_h=1, size_h=256):
+        '''
+        Specify the neural network architecture
+
+        :param n_input: The dimension of the input
+        :param n_output: The dimension of the output
+        :param n_h: The number of the hidden layer
+        :param size_h: The dimension of the hidden layer
+        '''
         super(MLP, self).__init__()
         self.n_input = n_input
         self.fc_in = nn.Linear(n_input, size_h)
         self.relu = nn.ReLU()
-
         assert n_h >= 1, "h must be integer and >= 1"
-
         self.fc_list = nn.ModuleList()
         for i in range(n_h - 1):
             self.fc_list.append(nn.Linear(size_h, size_h))
         self.fc_out = nn.Linear(size_h, n_output)
-
         # Initialize weight
         nn.init.uniform_(self.fc_in.weight, -0.1, 0.1)
         nn.init.uniform_(self.fc_out.weight, -0.1, 0.1)
@@ -107,71 +50,34 @@ class MLP(nn.Module):
             nn.init.uniform_(m.weight, -0.1, 0.1)
 
 class ReplayBuffer(object):
+    '''DQN replay buffer'''
     def __init__(self, capacity):
         self.buffer = deque(maxlen=capacity)
 
     def push(self, state, action, reward, next_state, done):
+        '''Add samples to the buffer'''
         state      = np.expand_dims(state, 0)
         next_state = np.expand_dims(next_state, 0)
-
         self.buffer.append((state, action, reward, next_state, done))
 
     def sample(self, batch_size):
+        '''Sample from the buffer'''
         state, action, reward, next_state, done = zip(*random.sample(self.buffer, batch_size))
         return np.concatenate(state), action, reward, np.concatenate(next_state), done
 
     def __len__(self):
         return len(self.buffer)
 
-
-def plot_fig(episode, all_rewards,avg_rewards, losses):
-    plt.figure(figsize=(12, 5))
-    plt.subplot(121)
-    plt.title('Reward Trend with %s Episodes' % (episode))
-    plt.xlabel("episode")
-    plt.ylabel("reward")
-    plt.plot(all_rewards, 'b')
-    plt.plot(avg_rewards, 'r')
-    plt.subplot(122)
-    plt.title('Loss Trend with %s Episodes' % (episode))
-    plt.plot(losses)
-    plt.show()
-
-def plot(frame_idx, rewards, losses):
-    plt.clf()
-    plt.close()
-    plt.ion()
-    plt.figure(figsize=(12 ,5))
-    plt.subplot(131)
-    plt.title('episode %s. reward: %s' % (frame_idx, np.mean(rewards[-10:])))
-    plt.plot(rewards)
-    plt.subplot(132)
-    plt.title('loss')
-    plt.plot(losses)
-    plt.pause(0.0001)
-
-def save_fig(episode, all_rewards, avg_rewards, losses, epsilon, number = 0):
-    plt.clf()
-    plt.close("all")
-    plt.figure(figsize=(6 ,5))
-    plt.title('Reward Trend with %s Episodes' % (episode))
-    plt.xlabel("episode")
-    plt.ylabel("reward")
-    plt.plot(all_rewards,'b')
-    plt.plot(avg_rewards,'r')
-    plt.savefig("storage/reward-"+str(number)+".png")
-    plt.figure(figsize=(12, 5))
-    plt.subplot(121)
-    plt.title('Loss Trend with Latest %s Steps' % (600))
-    plt.plot(losses[-600:])
-    plt.subplot(122)
-    plt.title('Epsilon with %s Episodes' % (episode))
-    plt.plot(epsilon)
-    plt.savefig("storage/loss-"+str(number)+".png")
-
 class Policy(object):
+    '''Core implementation of the DQN algorithm'''
+
     def __init__(self, env,config):
-        # load the configuration file
+        '''
+        Load the configuration setting and specify the environment
+
+        :param env: OpenAI gym style environment
+        :param config: (Dictionary) Configuration
+        '''
         model_config = config["model_config"]
         self.n_states = env.observation_space.shape[0]
         self.n_actions = model_config["n_actions"]
@@ -182,7 +88,12 @@ class Policy(object):
             self.model = MLP(self.n_states, self.n_actions, model_config["n_hidden"],
                              model_config["size_hidden"])
         if self.use_cuda:
+            self.Variable = lambda *args, **kwargs: autograd.Variable(*args,**kwargs).cuda()
             self.model=self.model.cuda()
+            print("Use CUDA")
+        else:
+            self.Variable = lambda *args, **kwargs: autograd.Variable(*args, **kwargs)
+            self.model = self.model.cpu()
 
         training_config = config["training_config"]
         self.current_model = self.model
@@ -197,47 +108,56 @@ class Policy(object):
         self.replay_buffer = ReplayBuffer(self.memory_size)
 
     def act(self, state, epsilon):
+        '''
+        Choose action based on the epsilon-greedy method
+
+        :param state: (numpy array) The observed state from the environment
+        :param epsilon: (float) The probability to choose a random action
+        :return: (numpy array) The choosed action
+        '''
         if random.random() > epsilon:
-            state   = Variable(torch.FloatTensor(state).unsqueeze(0), volatile=True)
+            state   = self.Variable(torch.FloatTensor(state).unsqueeze(0))
             q_value = self.model.forward(state)
             action  = q_value.max(1)[1].cpu().detach().numpy(  )  # .data[0]
         else:
             action = np.random.randint(size=(1,) ,low=0, high=self.n_actions)
         return action
 
-    # update the target network with current network parameters
     def update_target(self):
+        '''Update the target network with current network parameters'''
         self.target_model.load_state_dict(self.current_model.state_dict())
 
-    # change the learning rate during the training process
+
     def update_lr(self, lr):
+        '''Update the learning rate'''
         self.lr=lr
         self.optimizer = optim.Adam(self.current_model.parameters(),lr= self.lr)
 
     def train(self):
-        state, action, reward, next_state, done = self.replay_buffer.sample(self.batch_size)
+        '''
+        Sample from the replay buffer and train the current q-network
 
-        state      = Variable(torch.FloatTensor(np.float32(state)))
-        next_state = Variable(torch.FloatTensor(np.float32(next_state)))
-        action     = Variable(torch.LongTensor(action))
-        reward     = Variable(torch.FloatTensor(reward))
-        done       = Variable(torch.FloatTensor(done))
+        :return: The training loss
+        '''
+        state, action, reward, next_state, done = self.replay_buffer.sample(self.batch_size)
+        state      = self.Variable(torch.FloatTensor(np.float32(state)))
+        next_state = self.Variable(torch.FloatTensor(np.float32(next_state)))
+        action     = self.Variable(torch.LongTensor(action))
+        reward     = self.Variable(torch.FloatTensor(reward))
+        done       = self.Variable(torch.FloatTensor(done))
 
         q_values      = self.current_model(state)
         next_q_values = self.current_model(next_state)
         next_q_state_values = self.target_model(next_state)
-
         q_value       = q_values.gather(1, action.unsqueeze(1)).squeeze(1)
         next_q_value = next_q_state_values.gather(1, torch.max(next_q_values, 1)[1].unsqueeze(1)).squeeze(1)
         expected_q_value = reward + self.gamma * next_q_value * (1 - done)
-
-        loss = (q_value - Variable(expected_q_value.data)).pow(2).mean()
-
+        loss = (q_value - self.Variable(expected_q_value.data)).pow(2).mean()
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
-
         return loss
 
     def save_model(self, model_path = "storage/test.ckpt"):
+        '''Save model to a given path'''
         torch.save(self.model, model_path)
