@@ -4,54 +4,51 @@ from DQN import *
 import argparse
 from quanser_robots import GentlyTerminating
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--path", help="model name in the storage folder", type=str)
-args = parser.parse_args()
-
 plt.style.use('seaborn')
 env = GentlyTerminating(gym.make('QubeRR-v0'))
 
-MODEL_PATH = "storage/qube.ckpt"
+config_path = "config.yml"
+print_config(config_path)
+config = load_config(config_path)
+training_config = config["training_config"]
+config["model_config"]["load_model"] = True
 
-if args.path:
-    MODEL_PATH = "storage/"+args.path
+n_episodes = 10
+max_episode_step = 10000
+print("*********************************************")
+print("Testing the model for 10 episodes with 10000 maximum steps per episode")
+print("*********************************************")
 
-NUM_ACTIONS = 11
-current_model = torch.load(MODEL_PATH)
+policy = Policy(env,config)
 
-if USE_CUDA:
-    current_model = current_model.cuda()
+losses = []
+all_rewards = []
+avg_rewards = []
+epsilons = []
 
-s_all, a_all = [], []
+s_all = []
+a_all = []
 
-# data_rr=[]
-data_rr = torch.load("storage/data_rr.pkl")
-n_epoch = 1
-epsilon = 0.3
-
-for i in range(n_epoch):
-    print(i)
+for i in range(n_episodes):
+    print("Testing episodes %s" %i)
     obs_old = env.reset()
     obs_old[4:6] /= 20
     done = False
-    epsilon -=  0.03
     while not done:
-
         env.render()
-        action = current_model.act(obs_old, 0.0)
-        f_action = 5 * (action - (NUM_ACTIONS - 1) / 2) / ((NUM_ACTIONS - 1) / 2)
+        action = policy.act(obs_old, 0.0)
+        f_action = 5 * (action - (policy.n_actions - 1) / 2) / ((policy.n_actions - 1) / 2)
         obs_new, reward, done, info = env.step(f_action)
-        reward = 100*(reward-0.005)
+        reward = 100*reward
+        all_rewards.append(reward)
         obs_new[4:6] /= 20
-        data_rr.append([obs_old, action[0], reward, obs_new, done])
         obs_old = obs_new
         s_all.append(info['s'])
         a_all.append(info['a'])
 
+print("avg reward: ",np.mean(all_rewards))
+print("rewards: ", all_rewards)
 env.close()
-
-print("save collected data")
-torch.save(data_rr,"storage/data_rr.pkl")
 
 fig, axes = plt.subplots(5, 1, figsize=(5, 8), tight_layout=True)
 

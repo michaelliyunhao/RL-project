@@ -64,6 +64,7 @@ def ConvergencePlot(cost):
     plt.legend(loc="best", prop = font);
     plt.xlim([0,len(cost["mean"])]);
     plt.grid();
+    plt.savefig("mpc.png")
     plt.show();
 
 # ---- END

@@ -1,23 +1,7 @@
 # coding: utf-8
 
 from DQN import *
-import argparse
-from swingup import *
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--path", help="model name in the storage folder", type=str)
-args = parser.parse_args()
-
-MODEL_PATH = "storage/swing-good.ckpt"
-
-if args.path:
-    MODEL_PATH = "storage/"+args.path
-
-NUM_ACTIONS = 11
-current_model = torch.load(MODEL_PATH)
-
-if USE_CUDA:
-    current_model = current_model.cuda()
 
 use_plot = True
 render = True
@@ -34,8 +18,25 @@ if use_plot:
 # Initialize Controller & Environment:
 env, ctrl = get_env_and_controller(long_pendulum=False, simulation=False, swinging=True, mouse_control=False)
 
+
+config_path = "config.yml"
+print_config(config_path)
+config = load_config(config_path)
+training_config = config["training_config"]
+config["model_config"]["load_model"] = True
+
 n_episodes = 10
-time_steps = 10000000
+max_episode_step = 100000
+print("*********************************************")
+print("Testing the model on real platform for 10 episodes with 100000 maximum steps per episode")
+print("*********************************************")
+
+policy = Policy(env,config)
+losses = []
+all_rewards = []
+avg_rewards = []
+epsilons = []
+
 
 for i in range(n_episodes):
     print("\n\n###############################")
@@ -43,14 +44,15 @@ for i in range(n_episodes):
 
     # Reset the environment:
     env.reset()
-    obs, _, _, _ = env.step(np.zeros(1))
+    obs, reward, done, _ = env.step(np.zeros(1))
     # Start the Control Loop:
     print("\nStart Controller:\t\t\t", end="")
-    for n in range(time_steps):
+    for n in range(max_episode_step):
         obs[4] /= 10
-        action = current_model.act(obs, 0)
-        f_action = 16 * (action - (NUM_ACTIONS - 1) / 2) / ((NUM_ACTIONS - 1) / 2)
-        obs, _, done, _ = env.step(f_action)
+        action = policy.act(obs, 0)
+        f_action = 5 * (action - (policy.n_actions - 1) / 2) / ((policy.n_actions - 1) / 2)
+        obs, reward, done, _ = env.step(f_action)
+        all_rewards.append(reward)
         if done:
             print("Physical Limits or End of Time reached")
             break
@@ -60,7 +62,7 @@ for i in range(n_episodes):
 
         if use_plot and np.mod(n, collect_fr) == 0:
             alpha, theta = get_angles(obs[1], obs[2])
-            plot.update(theta=theta, alpha=alpha, theta_dt=obs[4], volt=act[0], u=act[1], x=obs[0])
+            plot.update(theta=theta, alpha=alpha, theta_dt=obs[4], volt=f_action, u=0, x=obs[0])
             env.render()
 
         if use_plot and np.mod(n, plot_fr) == 0:
@@ -69,6 +71,8 @@ for i in range(n_episodes):
     # Stop the cart:
     env.step(np.zeros(1))
 
+print("avg reward: ",np.mean(all_rewards))
+print("rewards: ", all_rewards)
 env.close()
 
 
