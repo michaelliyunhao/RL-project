@@ -4,7 +4,7 @@ Technische Universität Darmstadt winter semester 2018/2019
 Supervisor: Jan Peters, Riad Akrour
 
 This repository contains the PyTorch implementation of Deep Q-Network (DQN) and Model Predictive Control (MPC), 
-and the evaluation of them on the [quanser robot platform](https://git.ias.informatik.tu-darmstadt.de/quanser/clients) both in simulation and real world.
+and the evaluation of them on the [quanser robot platform](https://git.ias.informatik.tu-darmstadt.de/quanser/clients).
 
 ## Authors
 + Zuxin Liu
@@ -16,10 +16,10 @@ and the evaluation of them on the [quanser robot platform](https://git.ias.infor
 + [MPC](https://ieeexplore.ieee.org/abstract/document/8463189)
 
 ## Platforms
-+ Qube
-+ Double Pendlum
-+ Cartpole Swing-up
-+ Cartpole Stab
++ [Qube](https://git.ias.informatik.tu-darmstadt.de/quanser/clients/tree/master/quanser_robots/qube)
++ [Double Pendlum](https://git.ias.informatik.tu-darmstadt.de/quanser/clients/tree/master/quanser_robots/double_pendulum)
++ [Cartpole Swing-up](https://git.ias.informatik.tu-darmstadt.de/quanser/clients/tree/master/quanser_robots/cartpole)
++ [Cartpole Stab](https://git.ias.informatik.tu-darmstadt.de/quanser/clients/tree/master/quanser_robots/cartpole)
 
 ## Installation
 For the installation of the Quanser robot simulation environment, please see [this page](https://git.ias.informatik.tu-darmstadt.de/quanser/clients)
@@ -43,3 +43,9 @@ Then, activate your environment by
 ```
 source activate pytorch
 ```
+
+## How to run
+
+1. Choose the algorithm you want to use and change to the corresponding folder (DQN or MPC)
+2. Choose the environment you want to evaluate and change to the folder (CartPoleStab, Double, Qube or Swing)
+3. Change the configuration file ```config.yml``` to the parameters you want, and follow the instructions in the folder
