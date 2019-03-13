@@ -32,7 +32,7 @@ def train():
     np.random.seed(seed)
 
     '''Environment initialization'''
-    env_id = "CartpoleStabShort-v0"
+    env_id = "Qube-v0"
     env = GentlyTerminating(gym.make(env_id))
 
     '''Initialize the DQN algorithm object'''
