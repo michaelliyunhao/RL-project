@@ -46,7 +46,7 @@ def train():
     for i_episode in range(n_episodes):
         episode_reward = 0
         state = env.reset()
-        state[4:6] /= 10
+        state[4:6] /= 10  # scale the range to make sure all elements have the same order of magnitude
         epsilon = epsilon_by_frame(i_episode)
         epsilons.append(epsilon)
         for step in range(max_episode_step):

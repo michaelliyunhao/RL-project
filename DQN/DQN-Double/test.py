@@ -40,7 +40,7 @@ def test():
 
             f_action = 6*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)
             next_state, reward, done, _ = env.step(f_action)
-
+            reward = 10*reward
             next_state[4]/=10
 
             policy.replay_buffer.push(state, action[0], reward, next_state, done)

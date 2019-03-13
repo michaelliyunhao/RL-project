@@ -1,5 +1,5 @@
 model_config:
-    load_model: True # If set true, you must specify the model path, otherwise train a new model
+    load_model: False # If set true, you must specify the model path, otherwise train a new model
     model_path: "storage/exp_4.ckpt" # the path to load the model
     n_actions: 9
     n_hidden: 2 # hidden layer number
@@ -22,6 +22,6 @@ training_config:
     epsilon_start: 0.5 # episilon decay start
     epsilon_final: 0.2 # episilon decay end
     epsilon_decay: 200 # bandwidth
-    exp_number: 4  # experiment number
+    exp_number: 7  # experiment number
     save_best: False
 

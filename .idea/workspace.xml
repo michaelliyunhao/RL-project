@@ -2,12 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="update testrr">
-      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md" />
-      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/README.md" afterPath="$PROJECT_DIR$/DQN/DQN-Double/README.md" />
-      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/README.md" afterPath="$PROJECT_DIR$/DQN/DQN-Qube/README.md" />
-      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/train_on_data_rr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/train_rr.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/README.md" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Double/storage/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Qube/storage/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/storage/README.md" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/.ipynb_checkpoints/Qube-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/config.yml" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/config.yml" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_3.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_4_good.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_4_good_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_4_good_3.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_4_r_19988.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_4_r_19998.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_5.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/exp_6.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/.ipynb_checkpoints/Qube-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/Parameters.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/config.yml" afterPath="$PROJECT_DIR$/DQN/DQN-Double/config.yml" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_0.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_10.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_11.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_12.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_13.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_3.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_5.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_6.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_7.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_8.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/storage/exp_9.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/test.py" afterPath="$PROJECT_DIR$/DQN/DQN-Double/test.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/train.py" afterPath="$PROJECT_DIR$/DQN/DQN-Double/train.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/.idea/DQN-Qube.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/.ipynb_checkpoints/Qube-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/Cube Hyperparameters Optimization.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/Parameters.ods" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/Qube.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/config.yml" afterPath="$PROJECT_DIR$/DQN/DQN-Qube/config.yml" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/123.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/145.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/167.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/689.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/data_rr.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/data_rrr.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/exp_3.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/exp_4.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/exp_5.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/exp_7.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/exp_8.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/storage/exp_9.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/test.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Qube/test_rr.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/.ipynb_checkpoints/Qube-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/config.yml" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/config.yml" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/storage/exp_1_he_tried.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/storage/exp_1_interesting.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/storage/exp_3.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/data_exp_1.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/data_exp_2.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/data_exp_1.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/data_exp_2.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/data_exp_1.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/data_exp_2.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/data_exp_3.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/data_exp_4.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/exp_3.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/storage/exp_4.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/data_exp_1.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/data_exp_2.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/data_exp_3.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/data_exp_4.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/data_exp_5.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/data_exp_6.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/data_exp_7.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/datasets_hive.pkl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/exp_1.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/exp_2.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/exp_3.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/exp_4.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/exp_5.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/exp_6.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/exp_7.ckpt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/storage/labels_hive.pkl" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,70 +111,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="383">
-                <caret line="30" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="215">
-                <caret line="11" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="168">
-                <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="312">
-                <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -137,6 +168,10 @@
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/README.md" />
         <option value="$PROJECT_DIR$/DQN/DQN-Swing/README.md" />
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/train_rr.py" />
+        <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/README.md" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Double/storage/README.md" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Qube/storage/README.md" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Swing/storage/README.md" />
       </list>
     </option>
   </component>
@@ -180,35 +215,6 @@
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN-CartPoleStab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN-Double" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN-Qube" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN-Swing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
               <item name="MPC" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -231,11 +237,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DQN/DQN-Swing/storage" />
+      <recent name="$PROJECT_DIR$/DQN/DQN-Qube/storage" />
+      <recent name="$PROJECT_DIR$/DQN/DQN-Double/storage" />
+      <recent name="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage" />
       <recent name="$PROJECT_DIR$/MPC/MPC-CartPoleStab" />
-      <recent name="$PROJECT_DIR$/DQN/DQN-Swing" />
-      <recent name="$PROJECT_DIR$/DQN/DQN-Qube" />
-      <recent name="$PROJECT_DIR$/DQN/DQN-Double" />
-      <recent name="$PROJECT_DIR$/DQN/DQN-CartPoleStab" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -316,34 +322,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/dynamics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6696">
-          <caret line="279" column="23" lean-forward="false" selection-start-line="279" selection-start-column="23" selection-end-line="279" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-Double/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -475,9 +453,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#17#34#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -574,7 +550,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="383">
-            <caret line="30" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <caret line="30" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -585,7 +561,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="215">
-            <caret line="11" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <caret line="11" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -596,7 +572,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="168">
-            <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -630,8 +606,52 @@
     <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="312">
-            <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <first_editor relative-caret-position="408">
+            <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="216">
+            <caret line="9" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="129" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/storage/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="48">
+            <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/storage/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="48">
+            <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/storage/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="216">
+            <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
             <folding />
           </first_editor>
           <second_editor />
