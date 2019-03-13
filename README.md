@@ -6,7 +6,7 @@ Supervisor: Jan Peters, Riad Akrour
 This repository contains the PyTorch implementation of Deep Q-Network (DQN) and Model Predictive Control (MPC), 
 and the evaluation of them on the [quanser robot platform](https://git.ias.informatik.tu-darmstadt.de/quanser/clients).
 
-![here](./Resources/figures/stabe.gif =120x100)![here](./Resources/figures/qube.gif =120x100)
+![here](./Resources/figures/stabe.gif =120x100) ![here](./Resources/figures/qube.gif | width=100)
 
 ![here](./Resources/figures/swing.gif)![here](./Resources/figures/swing_interesting.gif)
 ## Authors
