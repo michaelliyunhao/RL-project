@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="update testrr">
-      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Double/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Qube/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/README.md" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test_rr.py" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test_rr.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/config.yml" afterPath="$PROJECT_DIR$/DQN/DQN-Double/config.yml" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Double/train.py" afterPath="$PROJECT_DIR$/DQN/DQN-Double/train.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/DQN.py" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/DQN.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/DQN-Swing/test_rr.py" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/test_rr.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,15 +18,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="720">
-                <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <first_editor relative-caret-position="696">
+                <caret line="29" column="69" lean-forward="true" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1752">
+              <caret line="78" column="43" lean-forward="false" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1848">
+              <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DQN.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/DQN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="811">
+              <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="768">
+              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,7 +116,6 @@
         <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py" />
-        <option value="$PROJECT_DIR$/DQN/DQN-Double/train.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-Double/test.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/train.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-Swing/train.py" />
@@ -84,6 +134,7 @@
         <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md" />
         <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" />
         <option value="$PROJECT_DIR$/DQN/DQN-Swing/README.md" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Double/train.py" />
       </list>
     </option>
   </component>
@@ -140,6 +191,12 @@
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
               <item name="DQN" type="462c0819:PsiDirectoryNode" />
               <item name="DQN-Double" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-Qube" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
@@ -347,45 +404,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/DQN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="200" column="83" lean-forward="false" selection-start-line="200" selection-start-column="70" selection-end-line="200" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2112">
           <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="93" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="78" column="43" lean-forward="false" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -569,11 +591,51 @@
     <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="720">
-            <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <first_editor relative-caret-position="696">
+            <caret line="29" column="69" lean-forward="true" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1752">
+          <caret line="78" column="43" lean-forward="false" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/DQN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

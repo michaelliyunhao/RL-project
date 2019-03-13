@@ -17,7 +17,7 @@ if use_plot:
     plot = PlotSignal(window=window)
 
 # Initialize Controller & Environment:
-env, ctrl = get_env_and_controller(long_pendulum=False, simulation=False, swinging=False, mouse_control=False)
+env, ctrl = get_env_and_controller(long_pendulum=False, simulation=True, swinging=False, mouse_control=False)
 
 
 config_path = "config.yml"

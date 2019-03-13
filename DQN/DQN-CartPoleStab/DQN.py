@@ -79,7 +79,7 @@ class Policy(object):
         :param config: (Dictionary) Configuration
         '''
         model_config = config["model_config"]
-        self.n_states = env.observation_space.shape[0]
+        self.n_states = 5 #env.observation_space.shape[0]
         self.n_actions = model_config["n_actions"]
         self.use_cuda = model_config["use_cuda"]
         if model_config["load_model"]:
