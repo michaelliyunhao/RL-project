@@ -35,7 +35,7 @@ def test():
         epsilons.append(epsilon)
         for step in range(max_episode_step):
             env.render()
-            time.sleep(0.001)
+            time.sleep(0.01)
             action = policy.act(state, epsilon)
 
             f_action = 6*(action-(policy.n_actions-1)/2)/((policy.n_actions-1)/2)

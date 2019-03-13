@@ -1,6 +1,6 @@
 model_config:
     load_model: False # If set true, you must specify the model path, otherwise train a new model
-    model_path: "storage/exp_1.ckpt" # the path to load the model
+    model_path: "storage/exp_4.ckpt" # the path to load the model
     n_actions: 9
     n_hidden: 2 # hidden layer number
     size_hidden: 128 # hidden layer size
