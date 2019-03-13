@@ -1,6 +1,6 @@
 # DQN - Deep Q-Network
 
-This folder contains the implementation of DQN algorithm and the evaluation of them
+This folder contains the implementation of DQN algorithm and the evaluation of it.
 
 For more details of DQN, see the paper [here](https://arxiv.org/abs/1312.5602)
 

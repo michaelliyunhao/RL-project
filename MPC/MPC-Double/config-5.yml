@@ -1,5 +1,3 @@
-# change the mpc horizon w.r.t. config 1 to compare
-
 model_config:
     load_model: False # If set true, you must specify the model path, otherwise train a new model
     model_path: "storage/exp_5.ckpt" # the path to load the model

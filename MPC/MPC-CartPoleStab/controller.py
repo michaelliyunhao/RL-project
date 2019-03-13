@@ -1,16 +1,6 @@
 import numpy as np
-import math
-import matplotlib.pyplot as plt
-import torch
-import torch.nn as nn
-import torch.optim as optim
-import torch.nn.functional as F
-import torchvision.transforms as T
-import torch.utils.data as data
-import pickle
 from Hive import Hive
 from Hive import Utilities
-import time
 
 
 class MPC(object):
@@ -26,6 +16,12 @@ class MPC(object):
         self.evaluator = Evaluator(self.gamma)
 
     def act(self, state, dynamic_model):
+        '''
+        Optimize the action by Artificial Bee Colony algorithm
+        :param state: (numpy array) current state
+        :param dynamic_model: system dynamic model
+        :return: (float) optimal action
+        '''
         self.evaluator.update(state, dynamic_model)
         optimizer = Hive.BeeHive( lower = [float(self.action_low)] * self.horizon,
                                   upper = [float(self.action_high)] * self.horizon,
@@ -36,6 +32,7 @@ class MPC(object):
         cost = optimizer.run()
         #print("Solution: ",optimizer.solution[0])
         #print("Fitness Value ABC: {0}".format(optimizer.best))
+        # Uncomment this if you want to see the performance of the optimizer
         #Utilities.ConvergencePlot(cost)
         return optimizer.solution[0]
 
@@ -59,8 +56,10 @@ class Evaluator(object):
             rewards -= (self.gamma ** j) * self.get_reward(state_tmp, actions[j])
         return rewards
 
-    # need to change this function according to different environment
     def get_reward(self,obs, action_n):
+        '''
+        Overwrite this function according to different environment
+        '''
         x, sin_th, cos_th, x_dot, theta_dot = obs
         cos_th = min(max(cos_th, -1), 1)
         reward = -cos_th + 1
