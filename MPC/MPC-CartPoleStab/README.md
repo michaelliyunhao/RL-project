@@ -3,8 +3,8 @@ collect_data:generate random datasets(states, actions) by randomly choosing a ho
 
 run
 
-'''
-python run.py --path config2.yml
-'''
+```
+python run.py --path config.yml
+```
 
 

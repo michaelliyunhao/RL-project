@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="update testrr">
-      <change beforePath="$PROJECT_DIR$/DQN/README.md" afterPath="$PROJECT_DIR$/DQN/README.md" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Double/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Qube/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DQN/DQN-Swing/README.md" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,62 +17,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_rr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test_rr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="e#17#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="408">
-                <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="40" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DQN/README.md">
+        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="264">
-                <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <first_editor relative-caret-position="720">
+                <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_rr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/test_rr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1704">
-              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="74" selection-end-column="31" />
-              <folding>
-                <element signature="e#17#34#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -125,6 +81,9 @@
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/test_rr.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/DQN/README.md" />
+        <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md" />
+        <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" />
+        <option value="$PROJECT_DIR$/DQN/DQN-Swing/README.md" />
       </list>
     </option>
   </component>
@@ -140,7 +99,9 @@
     <option name="width" value="1615" />
     <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -171,6 +132,35 @@
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-CartPoleStab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-Double" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN" type="462c0819:PsiDirectoryNode" />
+              <item name="DQN-Swing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC-CartPoleStab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -188,7 +178,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MPC/MPC-CartPoleStab" />
       <recent name="$PROJECT_DIR$/DQN/DQN-Swing" />
+      <recent name="$PROJECT_DIR$/DQN/DQN-Qube" />
+      <recent name="$PROJECT_DIR$/DQN/DQN-Double" />
       <recent name="$PROJECT_DIR$/DQN/DQN-CartPoleStab" />
     </key>
   </component>
@@ -271,38 +264,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/dynamics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6504">
-          <caret line="279" column="23" lean-forward="false" selection-start-line="279" selection-start-column="23" selection-end-line="279" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MPC/MPC-Double/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -456,13 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/swingup.py" />
     <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -507,21 +461,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/test_rr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1704">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="74" selection-end-column="31" />
           <folding>
-            <element signature="e#17#34#0" expanded="true" />
+            <element signature="e#17#34#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="264">
+            <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -530,16 +487,24 @@
         <state relative-caret-position="432">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="e#17#34#0" expanded="true" />
+            <element signature="e#17#34#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="81" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="408">
-            <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="40" />
+          <first_editor relative-caret-position="192">
+            <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
             <folding />
           </first_editor>
           <second_editor />
@@ -552,11 +517,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/README.md">
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="264">
-            <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <first_editor relative-caret-position="216">
+            <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="96">
+            <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Double/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="720">
+            <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
