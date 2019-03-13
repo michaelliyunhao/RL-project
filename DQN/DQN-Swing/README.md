@@ -1,10 +1,12 @@
 # DQN - CartPoleSwing
 
-This folder contains the implementation of DQN algorithm and the evaluation on the CartPoleStab environment
+This folder contains the implementation of DQN algorithm and the evaluation on the CartPoleSwing environment
 
 All the hyper-parameters and experiment setting are stored in the ```config.yml``` file
 
-All the results (figure and model) will be stored in the ```./storage``` folder
+All the results (figure and model) will be stored in the ```./storage``` folder by default
+
+If you are not familiar with this environment, you can use the  `anylize_env()`  function in the `utils.py` to help you quickly understand the environment's state space, action space, reward range, etc.
 
 ## How to run
 
@@ -16,7 +18,7 @@ To try our pre-trained model, simply run
 python test.py
 ```
 
-The script will find the model path specified in the ```config.yml``` file
+The script will load the model from the path specified in the ```config.yml``` file
  
 ### Train your own model
 
@@ -28,4 +30,16 @@ python train.py
 ```
 
 The script will load the configurations in the ```config.yml``` file and begin to train
+
+### Configuration parameter explanation
+
+In the ```config.yml``` file, there are two set of configuration.
+The first `model_config` is the configuration of the neural network architecture;
+The second `training_config` is the configuration for the training process.
+
+The `exp_number` parameter in the `training_config` is the number of your experiment. The name of saved figure results in the `./storage` folder will be determined by this parameter.
+
+If you want to train your model from scratch, then set the `load_model` parameter to `False`. If set to `True`, the trainer will load the model from `model_path`.
+
+If you think your training process is not stable and you want to save the model when the model has the best performance, set the `save_best` parameter to `True`.
 
