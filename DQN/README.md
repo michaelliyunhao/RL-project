@@ -8,6 +8,8 @@ Choose the environment folder and follow the instructions to run everything.
 
 ## Overview of the experiment results:
 
+The best experients parameters in different environments:
+
 | Environment  | Learning Rate    | Epsilon Decay  |  Batch Size  |  Action Number   | Gamma  |
 | --------   | -----:  | :----: | :----: | :----: | :----: |
 | Qube      |  0.001      |   1000    | 50   |   9  | 0.99  |
