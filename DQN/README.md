@@ -10,12 +10,12 @@ Choose the environment folder and follow the instructions to run everything.
 
 The best experients parameters in different environments:
 
-| Environment  | Learning Rate    | Epsilon Decay  |  Batch Size  |  Action Number   | Gamma  |
-| --------   | -----:  | :----: | :----: | :----: | :----: |
-| Qube      |  0.001      |   1000    | 50   |   9  | 0.99  |
-| CartPole Swingup |  0.001      |   1000    |  64  |  7   | 0.995  |
-| CartPole Stab   | 0.001      |   500   |   64 |  9  | 0.995  |
-| Double CartPole    | 0.001     |  2000   |   64 |  7   | 0.995  |
+| Environment  | Learning Rate    | Epsilon Decay  |  Batch Size  |  Action Number   | Gamma  |   average episode reward |
+| --------   | -----:  | :----: | :----: | :----: | :----: |  :----: |
+| Qube      |  0.001      |   1000    | 50   |   9  | 0.99  | 410  |
+| CartPole Swingup |  0.001      |   1000    |  64  |  7   | 0.995  |  4126 |
+| CartPole Stab   | 0.001      |   500   |   64 |  9  | 0.995  |  1535  |
+| Double CartPole    | 0.001     |  2000   |   64 |  7   | 0.995  |  383  |
 
 
 
