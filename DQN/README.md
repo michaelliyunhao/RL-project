@@ -8,6 +8,14 @@ Choose the environment folder and follow the instructions to run everything.
 
 ## Overview of the experiment results:
 
+| 水果        | 价格    |  数量  |    |     |     |
+| --------   | -----:  | :----: | :----: | :----: | :----: |
+| 香蕉        | $1      |   5    |    |     |   |
+| 苹果        | $1      |   6    |    |     |   |
+| 苹果        | $1      |   6    |    |     |   |
+| 苹果        | $1      |   6    |    |     |   |
+| 苹果        | $1      |   6    |    |     |   |
+
 % For tables use
 \begin{table}[htb]
 % table caption is above the table
