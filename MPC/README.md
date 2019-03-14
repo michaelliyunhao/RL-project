@@ -8,6 +8,14 @@ Choose the environment folder and follow the instructions to run everything.
 
 ## Overview of the experiment results:
 
+| Environment  | Horizon   |Numb\_bees  |   Max\_itrs  |  Gamma  |
+| --------   | -----:  | :----: | :----: | :----: |
+| Qube      |  30    |  8  | 30  |  0.98  | 
+| CartPole Swingup |  20  | 8   | 20 |  0.99  |
+| CartPole Stab   | 12  | 8  |  20 |  0.99  |
+| Double CartPole    | 5  | 8 |  20 |  0.99  | 
+
+
 % For tables use
 \begin{table}[h]
 % table caption is above the table
