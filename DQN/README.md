@@ -8,6 +8,25 @@ Choose the environment folder and follow the instructions to run everything.
 
 ## Overview of the experiment results:
 
+% For tables use
+\begin{table}[htb]
+% table caption is above the table
+\caption{experiment results(Algorithm: DQN)}
+\label{tab:1}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{llllll}
+\hline\noalign{\smallskip}
+Environment & Learning Rate & Epsilon Decay & Batch Size & Action Number & Gamma \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+Qube & 0.001 & 1000 & 50 &9  & 0.99 \\
+CartPole Swingup & 0.001 & 1000 & 64 &7 & 0.995\\
+CartPole Stab & 0.001 & 500 & 64 &9 & 0.995 \\
+Double CartPole & 0.001 & 2000 & 64 & 7 & 0.995\\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
 ### CartpoleStabShort-v0
    episode_rewards:
    
