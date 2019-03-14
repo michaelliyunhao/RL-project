@@ -11,12 +11,12 @@ Choose the environment folder and follow the instructions to run everything.
 
 The best experients parameters in different environments:
 
-| Environment  | Horizon   |Numb\_bees  |   Max\_itrs  |  Gamma  |
-| --------   | -----:  | :----: | :----: | :----: |
-| Qube      |  30    |  8  | 30  |  0.98  | 
-| CartPole Swingup |  20  | 8   | 20 |  0.99  |
-| CartPole Stab   | 12  | 8  |  20 |  0.99  |
-| Double CartPole    | 5  | 8 |  20 |  0.99  | 
+| Environment  | Horizon   |Numb\_bees  |   Max\_itrs  |  Gamma  |  average episode reward |
+| --------   | -----:  | :----: | :----: | :----: |  :----: |
+| Qube      |  30    |  8  | 30  |  0.98  | 2.0 |
+| CartPole Swingup |  20  | 8   | 20 |  0.99  | 57 |
+| CartPole Stab   | 12  | 8  |  20 |  0.99  | 0.085 |
+| Double CartPole    | 5  | 8 |  20 |  0.99  | 29  |
 
 
 
