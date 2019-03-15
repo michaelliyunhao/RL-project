@@ -24,6 +24,8 @@ The `training_config` part is the configuration of the training process paramet
 The `dataset_config` part is the configuration of the dataset parameters.
 The `mpc_config` part is the configuration of the MPC algorithm parameters.
 The `exp_number` parameter in the `training_config` is the number of your experiment. The name of saved figure results in the `./storage` folder will be determined by this parameter.
+
 If you want to train your model from scratch, then set the `load_model` parameter to `False`. If set to `True`, the trainer will load the model from `model_path`.
+
 If you think your training process is not Swingle and you want to save the model when the model has the best performance, set the `save_best` parameter to `True`.
 
