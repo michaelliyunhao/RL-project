@@ -21,8 +21,8 @@ The script will load the configurations in the ```config.yml``` file and begin t
 In the ```config.yml``` file, there are 4 sets of configuration.
 
 The `model_config`  part is the configuration of the parameters which determine the neural network architecture and the environment basis;
-The `training_config` part is the configuration of the training process parameters.
-The `dataset_config` part is the configuration of the dataset parameters.
+The `training_config` part is the configuration of the training process parameters;
+The `dataset_config` part is the configuration of the dataset parameters;
 The `mpc_config` part is the configuration of the MPC algorithm parameters.
 
 The `exp_number` parameter in the `training_config` is the number of your experiment. The name of saved figure results in the `./storage` folder will be determined by this parameter.
