@@ -2,7 +2,7 @@
 This folder contains the implementation of MPC algorithm and the evaluation on the CartPoleSwing environment
 All the hyper-parameters and experiment setting are stored in the ```config.yml``` file
 All the results (figure and model) will be stored in the ```./storage``` folder by default
-If you are not familiar with this environment, you can use the  `anylize_env()`  function in the `utils.py` to help you quickly understand the environment's state space, action space, reward range, etc.
+If you are not familiar with this environment, you can use the  `analyze_env()`  function in the `utils.py` to help you quickly understand the environment's state space, action space, reward range, etc.
 ## How to run
 ### Test the pre-trained
 To try our pre-trained model, simply run
