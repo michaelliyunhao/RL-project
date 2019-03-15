@@ -7,7 +7,7 @@ If you are not familiar with this environment, you can use the  `anylize_env()`
 ### Test the pre-trained
 To try our pre-trained model, simply run
 ```angularjs
-python test.py
+python run.py --path config.yml
 ```
 The script will load the model from the path specified in the ```config.yml``` file
 ### Train your own model
@@ -30,10 +30,5 @@ If you think your training process is not Swingle and you want to save the model
 collect_data:generate random datasets(states, actions) by randomly choosing a horizon of actions for the agent.
 
 
-run
-
-'''
-python run.py --path config2.yml
-'''
 
 
