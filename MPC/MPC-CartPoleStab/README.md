@@ -1,47 +1,28 @@
-# MPC - CartPoleStab
-
-This folder contains the implementation of MPC algorithm and the evaluation on the CartPoleStab environment
-
+# MPC - CartPoleStab
+This folder contains the implementation of MPC algorithm and the evaluation on the CartPoleStab environment
 All the hyper-parameters and experiment setting are stored in the ```config.yml``` file
-
 All the results (figure and model) will be stored in the ```./storage``` folder by default
-
-If you are not familiar with this environment, you can use the  `analyze_env()`  function in the `utils.py` to help you quickly understand the environment's state space, action space, reward range, etc.
-
+If you are not familiar with this environment, you can use the  `analyze_env()`  function in the `utils.py` to help you quickly understand the environment's state space, action space, reward range, etc.
 ## How to run
-
 ### Test the pre-trained
-
 To try our pre-trained model, simply run
-
 ```angularjs
-
 python run.py --path config.yml
 ```
-
 The script will load the model from the path specified in the ```config.yml``` file
-
 ### Train your own model
-
 To train your own model, you can change the hyper-parameters in the ```config.yml``` to whatever you want,
-
 and then run
-
 ```angularjs
-
 python train.py
-
 ```
-
 The script will load the configurations in the ```config.yml``` file and begin to train
-
 ### Configuration parameter explanation
+In the ```config.yml``` file, there are 4 sets of configuration.
 
-In the ```config.yml``` file, there are 4 parts of the configuration.
+The `model_config`  part is the configuration of the parameters which determine the neural network architecture and the environment basis.
 
-The `model_config`  part is the configuration of the parameters which determine the neural network architecture and the environment basis.
-
-The `training_config` part is the configuration of the training process parameters.
+The `training_config` part is the configuration of the training process parameters.
 
 The `dataset_config` part is the configuration of the dataset parameters.
 
@@ -51,9 +32,6 @@ The `exp_number` parameter in the `training_config` is the number of your experi
 
 If you want to train your model from scratch, then set the `load_model` parameter to `False`. If set to `True`, the trainer will load the model from `model_path`.
 
-If you think your training process is not stable and you want to save the model when the model has the best performance, set the `save_best` parameter to `True`.
-
-
-
+If you think your training process is not Stable and you want to save the model when the model has the best performance, set the `save_best` parameter to `True`.
 
 
