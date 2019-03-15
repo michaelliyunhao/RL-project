@@ -9,12 +9,12 @@ and the evaluation of them on the [quanser robot platform](https://git.ias.infor
 <img width="200" height="200" src="./Resources/figures/qube.gif"> <img width="200" height="200" src="./Resources/figures/stabe.gif">
 <img width="200" height="200" src="./Resources/figures/swing.gif"> <img width="200" height="200" src="./Resources/figures/swing_interesting.gif">
 
-<img width="400" height="400" src="./Resources/figures/qube-before-fine-tuning.gif" title="test"> <img width="400" height="400" src="./Resources/figures/qube-after-fine-tuning.gif">
+<img width="400" height="300" src="./Resources/figures/qube-before-fine-tuning.gif"> <img width="400" height="300" src="./Resources/figures/qube-after-fine-tuning.gif">
 
 ## Authors
-+ Zuxin Liu
-+ Yunhao Li
-+ Junfei Xiao
++ Zuxin Liu (Implement algorithms, clean code, run experiment and write report)
++ Yunhao Li (Run experiment and write report)
++ Junfei Xiao (Run experiment and write report)
 
 ## Algorithms
 + [DQN](https://arxiv.org/abs/1312.5602)
