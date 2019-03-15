@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="update testrr">
-      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/Hive/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-Double/Hive/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-Qube/Hive/README.md" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.idea/MPC qube.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/README.md" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/MPC qube.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-Double/README.md" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.idea/MPC qube.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-Qube/README.md" />
-      <change beforePath="$PROJECT_DIR$/MPC/README.md" afterPath="$PROJECT_DIR$/MPC/README.md" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,12 +23,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MPC/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="360">
-                <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="288">
+                <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -159,7 +149,6 @@
         <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/test_rr.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-Swing/test_rr.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/test_rr.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/DQN/DQN-Double/train.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md" />
         <option value="$PROJECT_DIR$/DQN/DQN-Double/README.md" />
@@ -186,6 +175,7 @@
         <option value="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/README.md" />
         <option value="$PROJECT_DIR$/MPC/MPC-Double/README.md" />
         <option value="$PROJECT_DIR$/MPC/MPC-Qube/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -226,34 +216,6 @@
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC-CartPoleStab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC-CartPoleSwing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC-Qube" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
@@ -416,21 +378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="192">
-            <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -760,10 +707,27 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="360">
-            <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="288">
+            <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
