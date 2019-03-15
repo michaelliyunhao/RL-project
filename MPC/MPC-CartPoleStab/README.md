@@ -39,7 +39,7 @@ The script will load the configurations in the ```config.yml``` file and begin t
 
 In the ```config.yml``` file, there are 4 parts of the configuration.
 
-The `model_config`  part is the configuration of the parameters which determine the neural network architecture and the environment basis;
+The `model_config`  part is the configuration of the parameters which determine the neural network architecture and the environment basis.
 
 The `training_config` part is the configuration of the training process parameters.
 
@@ -53,9 +53,6 @@ If you want to train your model from scratch, then set the `load_model` paramete
 
 If you think your training process is not stable and you want to save the model when the model has the best performance, set the `save_best` parameter to `True`.
 
-
-
-collect_data:generate random datasets(states, actions) by randomly choosing a horizon of actions for the agent.
 
 
 
