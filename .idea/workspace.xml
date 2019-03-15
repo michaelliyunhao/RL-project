@@ -2,26 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="update testrr">
-      <change beforePath="$PROJECT_DIR$/.idea/RL-project.iml" afterPath="$PROJECT_DIR$/.idea/RL-project.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/DQN/README.md" afterPath="$PROJECT_DIR$/DQN/README.md" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/config-2.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/config-3.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/config-4.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/config-5.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/controller.py" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/controller.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/controller.py" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/controller.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/dynamics.py" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/dynamics.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/config-1.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/config-2.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/config-3.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/config-4.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/config-5.yml" afterPath="$PROJECT_DIR$/MPC/MPC-Double/config-5.yml" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/controller.py" afterPath="$PROJECT_DIR$/MPC/MPC-Double/controller.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/dynamics.py" afterPath="$PROJECT_DIR$/MPC/MPC-Double/dynamics.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/controller.py" afterPath="$PROJECT_DIR$/MPC/MPC-Qube/controller.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/dynamics.py" afterPath="$PROJECT_DIR$/MPC/MPC-Qube/dynamics.py" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/loss-1.png" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/loss-1.png" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/model_error_exp_1.png" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/model_error_exp_1.png" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/test.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-1.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-2.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-3.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-4.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-5.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/test.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/config-5.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/test.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/test.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/test.py" afterPath="$PROJECT_DIR$/MPC/MPC-Qube/test.py" />
       <change beforePath="$PROJECT_DIR$/MPC/README.md" afterPath="$PROJECT_DIR$/MPC/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,44 +30,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dynamics.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dynamics.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="340" column="11" lean-forward="true" selection-start-line="340" selection-start-column="11" selection-end-line="340" selection-end-column="11" />
+            <state relative-caret-position="8592">
+              <caret line="362" column="43" lean-forward="true" selection-start-line="362" selection-start-column="43" selection-end-line="362" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DQN.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="77" column="48" lean-forward="true" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="48" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MPC/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="168">
+                <caret line="7" column="118" lean-forward="false" selection-start-line="7" selection-start-column="118" selection-end-line="7" selection-end-column="118" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="192">
+                <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -136,7 +127,6 @@
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/storage/README.md" />
         <option value="$PROJECT_DIR$/DQN/DQN-Swing/storage/README.md" />
         <option value="$PROJECT_DIR$/DQN/README.md" />
-        <option value="$PROJECT_DIR$/MPC/README.md" />
         <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/controller.py" />
         <option value="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/controller.py" />
         <option value="$PROJECT_DIR$/MPC/MPC-Double/controller.py" />
@@ -145,6 +135,9 @@
         <option value="$PROJECT_DIR$/MPC/MPC-Double/dynamics.py" />
         <option value="$PROJECT_DIR$/MPC/MPC-Qube/dynamics.py" />
         <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py" />
+        <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py" />
+        <option value="$PROJECT_DIR$/MPC/README.md" />
+        <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md" />
       </list>
     </option>
   </component>
@@ -178,6 +171,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,12 +183,6 @@
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
               <item name="DQN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN" type="462c0819:PsiDirectoryNode" />
-              <item name="DQN-CartPoleStab" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
@@ -211,19 +199,8 @@
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
               <item name="MPC" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC-CartPoleSwing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC-Double" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC-Qube" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC-CartPoleStab" type="462c0819:PsiDirectoryNode" />
+              <item name="Hive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
@@ -234,7 +211,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -331,7 +307,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/test_rr.py" />
     <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb" />
     <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py" />
     <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/DQN.py" />
@@ -398,25 +373,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1704">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="74" selection-end-column="31" />
-          <folding>
-            <element signature="e#17#34#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test_rr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test_rr.py" />
     <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="81" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -425,7 +389,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="192">
             <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -433,7 +396,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -442,7 +404,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="216">
             <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -457,7 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -465,7 +425,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1848">
           <caret line="79" column="12" lean-forward="false" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -473,7 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1752">
           <caret line="78" column="43" lean-forward="false" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -481,7 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2160">
           <caret line="149" column="45" lean-forward="false" selection-start-line="149" selection-start-column="45" selection-end-line="149" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -489,7 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,7 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="33" column="15" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -506,7 +461,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="383">
             <caret line="30" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -517,7 +471,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="215">
             <caret line="11" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -528,7 +481,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="168">
             <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -538,32 +490,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train_on_data_rr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1147">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train_rr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-475">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train_on_data_rr.py" />
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/train_rr.py" />
     <entry file="file://$PROJECT_DIR$/DQN/DQN-Swing/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="408">
             <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -574,7 +510,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="216">
             <caret line="9" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="129" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -585,7 +520,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="48">
             <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -596,7 +530,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="48">
             <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -607,7 +540,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="216">
             <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -617,9 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#12#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -628,28 +557,8 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="48">
             <caret line="2" column="81" lean-forward="false" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
-            <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="48">
-            <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="77" column="48" lean-forward="true" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="36" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,9 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,9 +587,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/dynamics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4771">
+          <caret line="420" column="0" lean-forward="true" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-Double/dynamics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="420" column="0" lean-forward="true" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleSwing/dynamics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="420" column="0" lean-forward="true" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -694,48 +623,45 @@
         <state relative-caret-position="384">
           <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py">
+    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/DQN.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/dynamics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4771">
-          <caret line="420" column="0" lean-forward="true" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-Double/dynamics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
-          <caret line="420" column="0" lean-forward="true" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleSwing/dynamics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
-          <caret line="420" column="0" lean-forward="true" selection-start-line="420" selection-start-column="0" selection-end-line="420" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="792">
+          <caret line="77" column="48" lean-forward="true" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="340" column="11" lean-forward="true" selection-start-line="340" selection-start-column="11" selection-end-line="340" selection-end-column="11" />
+        <state relative-caret-position="8592">
+          <caret line="362" column="43" lean-forward="true" selection-start-line="362" selection-start-column="43" selection-end-line="362" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="168">
+            <caret line="7" column="118" lean-forward="false" selection-start-line="7" selection-start-column="118" selection-end-line="7" selection-end-column="118" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="192">
+            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

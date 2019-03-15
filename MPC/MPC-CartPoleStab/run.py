@@ -24,8 +24,10 @@ env = GentlyTerminating(gym.make(env_id))
 model = DynamicModel(config)
 
 data_fac = DatasetFactory(env,config)
+
 data_fac.collect_random_dataset()
 
+'''Train on the random collected dataset'''
 loss = model.train(data_fac.random_trainset,data_fac.random_testset)
 
 mpc = MPC(env,config)

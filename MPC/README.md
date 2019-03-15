@@ -4,78 +4,19 @@ This folder contains the implementation of MPC algorithm and the evaluation of i
 
 The implementation is mainly followed in this paper [here](https://ieeexplore.ieee.org/abstract/document/8463189)
 
+To optimize the MPC controller, we use the [Artificial Bee Colony](https://en.wikipedia.org/wiki/Artificial_bee_colony_algorithm) (ABC) optimization algorithm, 
+instead of the original random shooting method in the paper. The implementation of ABC algorithm is based on this repo
+
 Choose the environment folder and follow the instructions to run everything.
 
 ## Overview of the experiment results:
 
 
-The best experients parameters in different environments:
+The best results in different environments:
 
-| Environment  | Horizon   |Numb\_bees  |   Max\_itrs  |  Gamma  |  average episode reward |
+| Environment  | Horizon   |Numb\_bees  |   Max\_itrs  |  Gamma  |  Episode reward |
 | --------   | -----:  | :----: | :----: | :----: |  :----: |
-| Qube      |  30    |  8  | 30  |  0.98  | 2.0 |
-| CartPole Swingup |  20  | 8   | 20 |  0.99  | 57 |
-| CartPole Stab   | 12  | 8  |  20 |  0.99  | 0.085 |
-| Double CartPole    | 5  | 8 |  20 |  0.99  | 29  |
-
-
-
-### CartpoleStabShort-v0
-   episode_rewards:
-   
-   learning_rate: 3e-5
-   
-   networks architecture:
-   
-   gamma: 0.98
-   
-   batch size: 20
-   
-   weight_decay: 1e-4
-   
-   num_epochs: 2000
-   
-### Qube-v0:
-   episode_rewards:
-   
-   learning_rate: 3e-5
-   
-   networks architecture:
-   
-   gamma: 0.98
-   
-   batch size: 20
-   
-   weight_decay: 1e-4
-   
-   num_epochs: 2000
-   
-   
-### DoublePendulum-v0
-   episode_rewards:
-   
-   learning_rate: 3e-5
-   
-   networks architecture:
-   
-   gamma: 0.99
-   
-   batch size: 20
-
-   weight_decay: 1e-4
-   
-   num_epochs: 2000
-
-### CartpoleSwingShort-v0
-   learning_rate: 3e-5
-   
-   networks architecture:
-   
-   gamma: 0.98
-   
-   batch size: 20
-   
-   weight_decay: 1e-4
-   
-   num_epochs: 2000
-
+| Qube      |  30    |  8  | 30  |  0.98  | 4.0 |
+| CartPole Swingup |  20  | 8   | 20 |  0.99  | 2000 |
+| CartPole Stab   | 12  | 8  |  20 |  0.99  | 19999 |
+| Double CartPole    | 5  | 8 |  20 |  0.99  | 91 |

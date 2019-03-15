@@ -7,9 +7,6 @@ from utils import *
 from quanser_robots.common import GentlyTerminating
 import time
 
-# datasets:  numpy array, size:[sample number, input dimension]
-# labels:  numpy array, size:[sample number, output dimension]
-
 def test(mpc, model):
     reward_episodes = []
     for i in range(data_fac.n_mpc_episodes):
