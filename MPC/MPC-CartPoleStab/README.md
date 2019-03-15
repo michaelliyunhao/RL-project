@@ -6,7 +6,7 @@ All the hyper-parameters and experiment setting are stored in the ```config.yml`
 
 All the results (figure and model) will be stored in the ```./storage``` folder by default
 
-If you are not familiar with this environment, you can use the  `anylize_env()`  function in the `utils.py` to help you quickly understand the environment's state space, action space, reward range, etc.
+If you are not familiar with this environment, you can use the  `analyze_env()`  function in the `utils.py` to help you quickly understand the environment's state space, action space, reward range, etc.
 
 ## How to run
 
@@ -16,8 +16,7 @@ To try our pre-trained model, simply run
 
 ```angularjs
 
-python test.py
-
+python run.py --path config.yml
 ```
 
 The script will load the model from the path specified in the ```config.yml``` file
@@ -59,10 +58,5 @@ If you think your training process is not stable and you want to save the model 
 collect_data:generate random datasets(states, actions) by randomly choosing a horizon of actions for the agent.
 
 
-run
-
-```
-python run.py --path config.yml
-```
 
 
