@@ -2,23 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0273351e-68dd-4b15-b41d-2aea75ab07a0" name="Default" comment="update testrr">
-      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/Hive/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-Double/Hive/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/MPC/MPC-Qube/Hive/README.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/loss-1.png" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/loss-1.png" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/model_error_exp_1.png" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/storage/model_error_exp_1.png" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/test.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-1.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-2.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-3.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-4.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/config-5.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/test.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/config-5.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/test.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/test.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/test.py" afterPath="$PROJECT_DIR$/MPC/MPC-Qube/test.py" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.idea/MPC qube.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/README.md" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/MPC qube.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Double/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-Double/README.md" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.idea/MPC qube.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MPC/MPC-Qube/README.md" afterPath="$PROJECT_DIR$/MPC/MPC-Qube/README.md" />
       <change beforePath="$PROJECT_DIR$/MPC/README.md" afterPath="$PROJECT_DIR$/MPC/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,19 +39,19 @@
       <file leaf-file-name="dynamics.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8592">
-              <caret line="362" column="43" lean-forward="true" selection-start-line="362" selection-start-column="43" selection-end-line="362" selection-end-column="43" />
+            <state relative-caret-position="2832">
+              <caret line="143" column="23" lean-forward="false" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MPC/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="168">
-                <caret line="7" column="118" lean-forward="false" selection-start-line="7" selection-start-column="118" selection-end-line="7" selection-end-column="118" />
+              <first_editor relative-caret-position="360">
+                <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -53,12 +59,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="192">
-                <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <first_editor relative-caret-position="383">
+                <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleSwing/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="648">
+                <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MPC/MPC-Double/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="648">
+                <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="672">
+                <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -115,7 +160,6 @@
         <option value="$PROJECT_DIR$/DQN/DQN-Swing/test_rr.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-Qube/test_rr.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" />
         <option value="$PROJECT_DIR$/DQN/DQN-Double/train.py" />
         <option value="$PROJECT_DIR$/DQN/DQN-CartPoleStab/README.md" />
         <option value="$PROJECT_DIR$/DQN/DQN-Double/README.md" />
@@ -136,8 +180,12 @@
         <option value="$PROJECT_DIR$/MPC/MPC-Qube/dynamics.py" />
         <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py" />
         <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/run.py" />
-        <option value="$PROJECT_DIR$/MPC/README.md" />
         <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md" />
+        <option value="$PROJECT_DIR$/MPC/README.md" />
+        <option value="$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md" />
+        <option value="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/README.md" />
+        <option value="$PROJECT_DIR$/MPC/MPC-Double/README.md" />
+        <option value="$PROJECT_DIR$/MPC/MPC-Qube/README.md" />
       </list>
     </option>
   </component>
@@ -199,8 +247,13 @@
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="RL-project" type="462c0819:PsiDirectoryNode" />
               <item name="MPC" type="462c0819:PsiDirectoryNode" />
-              <item name="MPC-CartPoleStab" type="462c0819:PsiDirectoryNode" />
-              <item name="Hive" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC-CartPoleSwing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RL-project" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC" type="462c0819:PsiDirectoryNode" />
+              <item name="MPC-Qube" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RL-project" type="b2602c69:ProjectViewProjectNode" />
@@ -221,11 +274,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MPC/MPC-Qube/Hive" />
+      <recent name="$PROJECT_DIR$/MPC/MPC-Double/Hive" />
+      <recent name="$PROJECT_DIR$/MPC/MPC-CartPoleSwing/Hive" />
       <recent name="$PROJECT_DIR$/DQN/DQN-Swing/storage" />
       <recent name="$PROJECT_DIR$/DQN/DQN-Qube/storage" />
-      <recent name="$PROJECT_DIR$/DQN/DQN-Double/storage" />
-      <recent name="$PROJECT_DIR$/DQN/DQN-CartPoleStab/storage" />
-      <recent name="$PROJECT_DIR$/MPC/MPC-CartPoleStab" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -307,24 +360,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/Qube.ipynb" />
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/train.py" />
-    <entry file="file://$PROJECT_DIR$/project/DQN/DQN-Qube/DQN.py" />
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube-Save/train.py" />
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-Qube/DQN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/DQN-CartPoleStab/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2112">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
@@ -396,21 +431,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
-            <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -635,30 +655,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8592">
-          <caret line="362" column="43" lean-forward="true" selection-start-line="362" selection-start-column="43" selection-end-line="362" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/README.md">
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="168">
-            <caret line="7" column="118" lean-forward="false" selection-start-line="7" selection-start-column="118" selection-end-line="7" selection-end-column="118" />
+          <first_editor relative-caret-position="192">
+            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/Hive/README.md">
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleSwing/Hive/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="192">
-            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-Double/Hive/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/Hive/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/dynamics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2832">
+          <caret line="143" column="23" lean-forward="false" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-Qube/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="672">
+            <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-Double/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="648">
+            <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleSwing/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="648">
+            <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/MPC-CartPoleStab/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="383">
+            <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MPC/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
