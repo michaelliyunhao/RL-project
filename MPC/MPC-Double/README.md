@@ -19,6 +19,7 @@ python train.py
 The script will load the configurations in the ```config.yml``` file and begin to train
 ### Configuration parameter explanation
 In the ```config.yml``` file, there are 4 sets of configuration.
+
 The `model_config`  part is the configuration of the parameters which determine the neural network architecture and the environment basis;
 The `training_config` part is the configuration of the training process parameters.
 The `dataset_config` part is the configuration of the dataset parameters.
