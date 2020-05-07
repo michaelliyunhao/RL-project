@@ -13,7 +13,7 @@ and the evaluation of them on the [quanser robot platform](https://git.ias.infor
 
 ## Authors
 + Zuxin Liu (Implement algorithms, clean code, run experiment and write report)
-+ Yunhao Li (Analyze algorithms, Run experiment and write report)
++ Yunhao Li (Implement algorithms, Analyze algorithms, Run experiment and write report)
 + Junfei Xiao (Analyze algorithms, Run experiment and write report)
 
 ## Algorithms
